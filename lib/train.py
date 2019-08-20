@@ -27,7 +27,7 @@ def train(para, sess, model, train_data_generator):
                         fetches=[model.loss, model.global_step, model.update])
                     train_loss += loss
                     count += 1
-                except tf.errors.OutOfRangeError:
+                except tf.compat.v1.errors.OutOfRangeError:
                     logging.info(
                         "global step: %d, loss: %.5f, epoch time: %.3f",
                         global_step, train_loss / count,

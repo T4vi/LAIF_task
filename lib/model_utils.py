@@ -51,6 +51,7 @@ def load_weights(para, sess, model):
 
 def save_model(para, sess, model):
     [global_step] = sess.run([model.global_step])
+    logging.debug(f'Saving model, step {global_step}')
     checkpoint_path = os.path.join(para.model_dir, "model.ckpt")
     model.saver.save(sess, checkpoint_path, global_step=global_step)
 

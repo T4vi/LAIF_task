@@ -12,12 +12,12 @@ def main():
     para = params_setup()
     logging_config_setup(para)
 
-    logging.info('creating graph')
+    logging.info('Creating graph')
     graph, model, data_generator = create_graph(para)
 
     with tf.Session(config=config_setup(), graph=graph) as sess:
         sess.run(tf.global_variables_initializer())
-        logging.info('loading weights')
+        logging.info('Loading weights')
         load_weights(para, sess, model)
         print_num_of_trainable_parameters()
 

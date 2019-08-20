@@ -26,6 +26,7 @@ def params_setup():
     parser.add_argument('--mode', type=str, default='train')
     parser.add_argument('--model_dir', type=str, default='./models/model')
     parser.add_argument('--mts', type=int, default=1)
+    parser.add_argument('--split', type=float, default=0.2)
     parser.add_argument('--num_epochs', type=int, default=40)
     parser.add_argument('--num_layers', type=int, default=3)
     parser.add_argument('--num_units', type=int, default=338)
@@ -39,6 +40,10 @@ def params_setup():
 
     if para.attention_len == -1:
         para.attention_len = para.max_len
+
+    if not 0.01 <= para.split <= 0.5:
+        para.split = 0.1
+        logging.error('Split param must be in (0, 1). Reset to 0.1') 
 
     create_dir(para.model_dir)
 

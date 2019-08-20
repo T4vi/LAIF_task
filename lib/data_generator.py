@@ -248,8 +248,8 @@ class LPD5DataGenerator(MusicDataGenerator):
             self.DATA_FULL_PATH + "/**/*.npz", recursive=True)
         num_of_raw_data = len(filename_list)
 
-        #l, r = int(num_of_raw_data * 0.8), int(num_of_raw_data * 0.9)
-        l, r = int(num_of_raw_data * 0.1), int(num_of_raw_data * 0.2)
+        l, r = int(num_of_raw_data * 0.8), int(num_of_raw_data * 0.9)
+        #l, r = int(num_of_raw_data * 0.1), int(num_of_raw_data * 0.2)
         self._convert_to_tfrecords("train", filename_list[:l])
         self._convert_to_tfrecords("validation", filename_list[l:r])
         self._convert_to_tfrecords("test", filename_list[r:])
@@ -296,7 +296,7 @@ class TimeSeriesDataGenerator(DataGenerator):
                                       para.data_set + str(self.h))
         create_dir(self.DATA_PATH)
         self._download_file()
-        self.split = [0, 0.6, 0.8, 1]
+        self.split = [0, 1-2*para.split, 1-para.split, 1]
         self.split_names = ["train", "validation", "test"]
         self._preprocess(para)
         del self.raw_dat, self.dat
