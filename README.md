@@ -2,6 +2,8 @@
 
 Original Implementation of [''Temporal Pattern Attention for Multivariate Time Series Forecasting''](https://arxiv.org/abs/1809.04206).
 
+[PDF](https://arxiv.org/pdf/1809.04206.pdf)
+
 ## Requirements
 Data requirements:
 - We need to know how the data looks like and how users would create similar datasets. What's the format of annotation files, what is important.
