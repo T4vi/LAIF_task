@@ -5,6 +5,10 @@ import tensorflow as tf
 
 from lib.utils import create_dir, check_path_exists
 
+#logging not working with TF 1.14 fix
+import absl.logging
+logging.root.removeHandler(absl.logging._absl_handler)
+absl.logging._warn_preinit_stderr = False
 
 def params_setup():
     parser = argparse.ArgumentParser()
@@ -31,7 +35,7 @@ def params_setup():
     if para.data_set == "muse" or para.data_set == "lpd5":
         para.mts = 0
 
-    para.logging_level = logging.INFO
+    para.logging_level = logging.DEBUG
 
     if para.attention_len == -1:
         para.attention_len = para.max_len
@@ -46,14 +50,18 @@ def params_setup():
 def logging_config_setup(para):
     if para.file_output == 0:
         logging.basicConfig(
-            level=para.logging_level, format='%(levelname)-8s - %(message)s')
+            level=para.logging_level, 
+            format='%(levelname)3s %(filename)s %(asctime)s  - %(message)s',
+            datefmt='%d/%m %H:%M:%S',)
     else:
+        #open(para.model_dir + '/progress.txt', 'w+')
         logging.basicConfig(
             level=para.logging_level,
-            format='%(levelname)-8s - %(message)s',
-            filename=para.model_dir + '/progress.txt')
+            format='%(levelname)3s %(filename)s %(asctime)s  - %(message)s',
+            datefmt='%d/%m %H:%M:%S',
+            filename=para.model_dir + '/progress.log')
         logging.getLogger().addHandler(logging.StreamHandler())
-    tf.logging.set_verbosity(tf.logging.ERROR)
+    tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.DEBUG)
 
 
 def config_setup():

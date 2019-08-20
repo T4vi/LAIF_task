@@ -82,8 +82,8 @@ class TemporalPatternAttentionCellWrapper(rnn_cell_impl.RNNCell):
                 `state_is_tuple` is `False` or if attn_length is zero or less.
         """
         super(TemporalPatternAttentionCellWrapper, self).__init__(_reuse=reuse)
-        if not rnn_cell_impl._like_rnncell(cell):
-            raise TypeError("The parameter cell is not RNNCell.")
+        rnn_cell_impl.assert_like_rnncell('FillerName',cell)
+        #    raise TypeError("The parameter cell is not RNNCell.")
         if nest.is_sequence(cell.state_size) and not state_is_tuple:
             raise ValueError("Cell returns tuple of states, but the flag "
                              "state_is_tuple is not set. State size is: %s" %

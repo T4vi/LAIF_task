@@ -248,7 +248,8 @@ class LPD5DataGenerator(MusicDataGenerator):
             self.DATA_FULL_PATH + "/**/*.npz", recursive=True)
         num_of_raw_data = len(filename_list)
 
-        l, r = int(num_of_raw_data * 0.8), int(num_of_raw_data * 0.9)
+        #l, r = int(num_of_raw_data * 0.8), int(num_of_raw_data * 0.9)
+        l, r = int(num_of_raw_data * 0.1), int(num_of_raw_data * 0.2)
         self._convert_to_tfrecords("train", filename_list[:l])
         self._convert_to_tfrecords("validation", filename_list[l:r])
         self._convert_to_tfrecords("test", filename_list[r:])
