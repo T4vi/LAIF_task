@@ -19,6 +19,7 @@ def test(para, sess, model, data_generator):
                     model.labels
                 ]
             )
+            #print(outputs.shape)
             if para.mts:
                 test_rse += np.sum(
                     ((outputs - labels) * data_generator.scale) ** 2

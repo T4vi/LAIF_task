@@ -15,7 +15,7 @@ Inference requirements:
 		- ????
 
 	+ Return predictions for the next K samples
-		- WIP
+		- 
  	
 Train requirements:
 	+ We need to be able to load initialization weights (if none provided, start from random) before training

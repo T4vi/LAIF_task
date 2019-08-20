@@ -42,6 +42,13 @@ class DataGenerator(metaclass=ABCMeta):
         over the dataset once. On the other hand there is no special initialization
         required.
         """
+        if mode == 'predict':
+            x = tf.placeholder(tf.float32, shape=[None, self.attention_len])
+            dataset = tf.data.Dataset.from_tensor_slices(x)
+
+            self.iterator = dataset.make_initializable_iterator()
+            return self.iterator.get_next()
+
         if mode != "train" and mode != "validation" and mode != "test":
             raise ValueError("mode: {} while mode should be "
                              "'train', 'validation', or 'test'".format(mode))

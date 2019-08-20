@@ -19,7 +19,7 @@ def params_setup():
     parser.add_argument('--dropout', type=float, default=0.2)
     parser.add_argument('--file_output', type=int, default=1)
     parser.add_argument('--highway', type=int, default=0)
-    parser.add_argument('--horizon', type=int, default=3)
+    parser.add_argument('--horizon', type=int, default=5)
     parser.add_argument('--init_weight', type=float, default=0.1)
     parser.add_argument('--learning_rate', type=float, default=1e-5)
     parser.add_argument('--max_gradient_norm', type=float, default=5.0)
@@ -69,7 +69,7 @@ def logging_config_setup(para):
             datefmt='%d/%m %H:%M:%S',
             filename=para.model_dir + '/progress.log')
         logging.getLogger().addHandler(logging.StreamHandler())
-    tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.DEBUG)
+    tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
 
 def config_setup():

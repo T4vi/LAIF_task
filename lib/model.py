@@ -26,6 +26,7 @@ class PolyRNN:
         self.rnn_inputs, self.rnn_inputs_len, self.target_outputs = self.data_generator.inputs(
             self.para.mode, self.para.batch_size)
 
+        #print(self.rnn_inputs.shape)
         # rnn_inputs_embed: [batch_size, max_len, num_units]
         self.rnn_inputs_embed = tf.nn.relu(
             dense(self.rnn_inputs, self.para.num_units))
