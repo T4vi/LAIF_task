@@ -24,6 +24,7 @@ def params_setup():
     parser.add_argument('--learning_rate', type=float, default=1e-5)
     parser.add_argument('--max_gradient_norm', type=float, default=5.0)
     parser.add_argument('--mode', type=str, default='train')
+    parser.add_argument('--initial_weights', type=str, default='')
     parser.add_argument('--model_dir', type=str, default='./models/model')
     parser.add_argument('--mts', type=int, default=1)
     parser.add_argument('--split', type=float, default=0.2)
@@ -46,6 +47,7 @@ def params_setup():
         logging.error('Split param must be in (0, 1). Reset to 0.1') 
 
     create_dir(para.model_dir)
+    first_epoch = True;
 
     json_path = para.model_dir + '/parameters.json'
     json.dump(vars(para), open(json_path, 'w'), indent=4)

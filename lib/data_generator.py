@@ -297,6 +297,7 @@ class TimeSeriesDataGenerator(DataGenerator):
         create_dir(self.DATA_PATH)
         self._download_file()
         self.split = [0, 1-2*para.split, 1-para.split, 1]
+        logging.debug(f'split is {self.split}')
         self.split_names = ["train", "validation", "test"]
         self._preprocess(para)
         del self.raw_dat, self.dat

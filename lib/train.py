@@ -15,7 +15,7 @@ def train(para, sess, model, train_data_generator):
         valid_sess.run(tf.global_variables_initializer())
 
         for epoch in range(1, para.num_epochs + 1):
-            logging.info("Epoch: %d" % epoch)
+            logging.info("\n\nEpoch: %d" % epoch)
             sess.run(train_data_generator.iterator.initializer)
 
             start_time = time.time()
@@ -29,7 +29,7 @@ def train(para, sess, model, train_data_generator):
                     count += 1
                 except tf.compat.v1.errors.OutOfRangeError:
                     logging.info(
-                        "global step: %d, loss: %.5f, epoch time: %.3f",
+                        "global step: %d, loss: %.5f, epoch time: %.3fs",
                         global_step, train_loss / count,
                         time.time() - start_time)
                     save_model(para, sess, model)

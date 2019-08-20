@@ -40,13 +40,18 @@ def create_valid_graph(para):
 
 
 def load_weights(para, sess, model):
-    ckpt = tf.train.get_checkpoint_state(para.model_dir)
-    if ckpt:
-        logging.info('Loading model from %s', ckpt.model_checkpoint_path)
-        model.saver.restore(sess, ckpt.model_checkpoint_path)
+    if first_epoch & para.initial_weights != '':
+        first_epoch = False
+        logging.info('Loading initial model from %s', para.initial_weights)
+        model.saver.restore(sess, para.initial_weights)
     else:
-        logging.info('Loading model with fresh parameters')
-        sess.run(tf.global_variables_initializer())
+        ckpt = tf.train.get_checkpoint_state(para.model_dir)
+        if ckpt:
+            logging.info('Loading saved model from %s', ckpt.model_checkpoint_path)
+            model.saver.restore(sess, ckpt.model_checkpoint_path)
+        else:
+            logging.info('Loading model with fresh parameters')
+            sess.run(tf.global_variables_initializer())
 
 
 def save_model(para, sess, model):
