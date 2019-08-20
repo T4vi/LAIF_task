@@ -81,3 +81,4 @@ def train(para, sess, model, train_data_generator):
                     valid_loss, valid_rse, valid_corr)
             else:
                 logging.info("validation loss: %.5f", valid_loss / count)
+

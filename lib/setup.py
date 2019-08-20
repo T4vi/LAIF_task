@@ -31,6 +31,7 @@ def params_setup():
     parser.add_argument('--num_epochs', type=int, default=40)
     parser.add_argument('--num_layers', type=int, default=3)
     parser.add_argument('--num_units', type=int, default=338)
+    parser.add_argument('--first_epoch', type=int, default=1)
 
     para = parser.parse_args()
 
@@ -47,7 +48,7 @@ def params_setup():
         logging.error('Split param must be in (0, 1). Reset to 0.1') 
 
     create_dir(para.model_dir)
-    first_epoch = True;
+    para.first_epoch = 1;
 
     json_path = para.model_dir + '/parameters.json'
     json.dump(vars(para), open(json_path, 'w'), indent=4)

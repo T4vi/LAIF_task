@@ -38,10 +38,11 @@ def create_valid_graph(para):
     valid_graph, valid_model, valid_data_generator = create_graph(valid_para)
     return valid_para, valid_graph, valid_model, valid_data_generator
 
-
+#loads saved weights into model. 
+#If initial_weights is set, the first iteration will start with those weights. Continues with checkpoints
 def load_weights(para, sess, model):
-    if first_epoch & para.initial_weights != '':
-        first_epoch = False
+    if para.first_epoch and para.initial_weights != '':
+        para.first_epoch = False
         logging.info('Loading initial model from %s', para.initial_weights)
         model.saver.restore(sess, para.initial_weights)
     else:
@@ -60,6 +61,12 @@ def save_model(para, sess, model):
     checkpoint_path = os.path.join(para.model_dir, "model.ckpt")
     model.saver.save(sess, checkpoint_path, global_step=global_step)
 
+#save model in folder pointed at by path as <name>.ckpt
+def save_weights(sess, model, path, name):
+    #should add a timestamp or some unique ID
+    path = os.path.join(path + name + ".w")
+    logging.debug(f'Saving model {name} at {path}')
+    model.saver.save(sess, path)
 
 def print_num_of_trainable_parameters():
     total_parameters = 0
@@ -71,3 +78,8 @@ def print_num_of_trainable_parameters():
             variable_parameters *= dim.value
         total_parameters += variable_parameters
     logging.info('# of trainable parameters: %d' % total_parameters)
+
+#cleans learnt model
+def cleanup_train(sess, model):
+    logging.info('Clearing model')
+    sess.run(tf.global_variables_initializer())

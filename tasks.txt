@@ -1,3 +1,6 @@
++ Try to train and compare results with the ones in the paper 
+	- 2h+ for 1 epoch on muse with 3x338 and it didn't finish...
+
 + We need to know how the data looks like and how users would create similar datasets. What's the format of annotation files, what is important.
 	- txt/csv with a '\t', ' ', ',' separator. Each series on a column. Should be the same length (pad with 0/smth if data not available)
 
@@ -6,27 +9,27 @@
 
 Inference requirements:
 	+ We need to be able to load a set of saved weights (from arbitrary local path)
-		- using load_weights, --initial_weights path and first_epoch=True 
+		- using load_weights, --initial_weights file path and first_epoch=True 
 
 	+ We need to be able to initialize historical data
 		- ????
 
 	+ Return predictions for the next K samples
 		- WIP
-
+ 	
 Train requirements:
 	+ We need to be able to load initialization weights (if none provided, start from random) before training
-		- Done. Same as above?
+		- Done. use --initial_weights to point to file
 
 	+ We need to be able to specify an arbitrary number of epochs to run
 		- Done
 
 	+ We need to be able to compute metrics on a validation dataset (provided in paper)
-		- Done
+		- 
 
   + We would like to have a certain granularity within this API:
 	+ prepare_train(train_split, test_split)
-		- By using the --split param, the data gets split into [split] % validation, [split] % testing, rest for training 
+		- Done. By using the --split param, the data gets split into [split] % validation, [split] % testing, rest for training 
 
 	+ run_single_epoch()  # Uses train_split, outputs loss
 		- 
@@ -35,7 +38,7 @@ Train requirements:
 		- 
 
 	+ save_weights(path)
-		- Done. TEST IT
+		- Done. Takes (session, model, path, name). Could add some unique ID to the name
 
 	+ cleanup_train()
-		- 
+		- ? =Clean model weights ?

@@ -3,7 +3,7 @@ import logging
 import tensorflow as tf
 
 from lib.setup import params_setup, logging_config_setup, config_setup
-from lib.model_utils import create_graph, load_weights, print_num_of_trainable_parameters
+from lib.model_utils import create_graph, load_weights, print_num_of_trainable_parameters, save_weights
 from lib.train import train
 from lib.test import test
 
@@ -25,9 +25,11 @@ def main():
             if para.mode == 'train':
                 logging.info('started training')
                 train(para, sess, model, data_generator)
+                #save_weights(sess, model, '', 'testModel2')
             elif para.mode == 'test':
                 logging.info('started testing')
                 test(para, sess, model, data_generator)
+
 
         except KeyboardInterrupt:
             print('KeyboardInterrupt')
