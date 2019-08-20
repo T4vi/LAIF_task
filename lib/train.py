@@ -32,11 +32,15 @@ def train(para, sess, model, train_data_generator):
                         "global step: %d, loss: %.5f, epoch time: %.3fs",
                         global_step, train_loss / count,
                         time.time() - start_time)
+                    #if para.save_models:
                     save_model(para, sess, model)
                     break
 
             # validation
+            # if para.save_models:
             load_weights(valid_para, valid_sess, valid_model)
+            # else:
+            #     valid_model = model
             valid_sess.run(valid_data_generator.iterator.initializer)
             valid_loss = 0.0
             valid_rse = 0.0
@@ -81,6 +85,9 @@ def train(para, sess, model, train_data_generator):
                     valid_loss, valid_rse, valid_corr)
             else:
                 logging.info("validation loss: %.5f", valid_loss / count)
+
+        #save only the last model
+        save_model(para, sess, model)
 
 
 def run_single_epoch(para, sess, model, train_data_generator):

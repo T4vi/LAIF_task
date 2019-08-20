@@ -32,10 +32,10 @@ Train requirements:
 		- Done. By using the --split param, the data gets split into [split] % validation, [split] % testing, rest for training 
 
 	+ run_single_epoch()  # Uses train_split, outputs loss
-		- 
+		- Done. TEST IT
 
 	+ run_validation()  # Uses test_split <validation_split?>, outputs metrics
-		- 
+		- Done. TEST IT
 
 	+ save_weights(path)
 		- Done. Takes (session, model, path, name). Could add some unique ID to the name
