@@ -62,9 +62,8 @@ def save_model(para, sess, model):
     model.saver.save(sess, checkpoint_path, global_step=global_step)
 
 #save model in folder pointed at by path as <name>.ckpt
-def save_weights(sess, model, path, name):
+def save_weights(sess, model, path):
     #should add a timestamp or some unique ID
-    path = os.path.join(path + name + ".w")
     logging.debug(f'Saving model {name} at {path}')
     model.saver.save(sess, path)
 

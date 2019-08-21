@@ -42,3 +42,7 @@ Train requirements:
 
 	+ cleanup_train()
 		- 
+
+Extras:
+	- pls epoch progress bar
+	-

@@ -27,6 +27,10 @@ def train(para, sess, model, train_data_generator):
                         fetches=[model.loss, model.global_step, model.update])
                     train_loss += loss
                     count += 1
+                    
+                    if count % 25 == 0:
+                        # print(count, end=' ')
+                        logging.debug(count)
                 except tf.compat.v1.errors.OutOfRangeError:
                     logging.info(
                         "global step: %d, loss: %.5f, epoch time: %.3fs",
@@ -87,7 +91,7 @@ def train(para, sess, model, train_data_generator):
                 logging.info("validation loss: %.5f", valid_loss / count)
 
         #save only the last model
-        save_model(para, sess, model)
+        #save_model(para, sess, model)
 
 
 def run_single_epoch(para, sess, model, train_data_generator):

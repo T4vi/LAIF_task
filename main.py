@@ -27,7 +27,8 @@ def main():
             if para.mode == 'train':
                 logging.info('Started training')
                 train(para, sess, model, data_generator)
-                save_weights(sess, model, '', 'testModel3')
+                if para.save_final_model_path != ''
+                    save_weights(sess, model, para.save_final_model_path)
             elif para.mode == 'validation':
                 logging.info('Started validation')
                 test(para, sess, model, data_generator)
