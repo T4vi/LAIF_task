@@ -43,7 +43,7 @@ class DataGenerator(metaclass=ABCMeta):
         required.
         """
         if mode == 'predict':
-            x = tf.placeholder(tf.float32, shape=[None, self.attention_len])
+            x = tf.placeholder(tf.float32, shape=[None, self.para.attention_len])
             dataset = tf.data.Dataset.from_tensor_slices(x)
 
             self.iterator = dataset.make_initializable_iterator()

@@ -1,5 +1,5 @@
 + Try to train and compare results with the ones in the paper 
-	- 2h+ for 1 epoch on muse with 3x338 and it didn't finish...
+	- 2h+ for 1 epoch on muse with 3x338 and it didn't finish... Still TODO
 
 + We need to know how the data looks like and how users would create similar datasets. What's the format of annotation files, what is important.
 	- txt/csv with a '\t', ' ', ',' separator. Each series on a column. Should be the same length (pad with 0/smth if data not available)
@@ -15,17 +15,17 @@ Inference requirements:
 		- ????
 
 	+ Return predictions for the next K samples
-		- 
+		- TODO:Try some other version maybe
  	
 Train requirements:
 	+ We need to be able to load initialization weights (if none provided, start from random) before training
 		- Done. use --initial_weights to point to file
 
 	+ We need to be able to specify an arbitrary number of epochs to run
-		- Done
+		- Done.
 
 	+ We need to be able to compute metrics on a validation dataset (provided in paper)
-		- 
+		- switchable by using --mts
 
   + We would like to have a certain granularity within this API:
 	+ prepare_train(train_split, test_split)
@@ -35,10 +35,10 @@ Train requirements:
 		- Done. TEST IT
 
 	+ run_validation()  # Uses test_split <validation_split?>, outputs metrics
-		- Done. TEST IT
+		- Done.
 
 	+ save_weights(path)
 		- Done. Takes (session, model, path, name). Could add some unique ID to the name
 
 	+ cleanup_train()
-		- ? =Clean model weights ?
+		- Done if =Clean model weights
