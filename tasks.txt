@@ -1,6 +1,6 @@
 General:
 + Try to train and compare results with the ones in the paper 
-	- WIP - In Colab
+	- WIP - In Colab - much better
 
 + We need to know how the data looks like and how users would create similar datasets. What's the format of annotation files, what is important.
 	- txt/csv with a '\t', ' ', ',' separator. Each series on a column. Should be the same length (pad with 0/smth if data not available)
@@ -13,10 +13,10 @@ Inference requirements:
 		- Done. using load_weights, --initial_weights file path and first_epoch=True 
 
 	+ We need to be able to initialize historical data
-		- init LSTM params - HOW inside graph with LSTMBlockCell??
+		- Done. Needs some refining before using
 
 	+ Return predictions for the next K samples
-		- ?? TODO:Try some other version maybe
+		- ?? TODO:Fix data generator?
  	
 Train requirements:
 	+ We need to be able to load initialization weights (if none provided, start from random) before training
@@ -26,7 +26,7 @@ Train requirements:
 		- Done.
 
 	+ We need to be able to compute metrics on a validation dataset (provided in paper)
-		- Details. switchable by using --mts
+		- Done. Details.
 
   + We would like to have a certain granularity within this API:
 	+ prepare_train(train_split, test_split)
@@ -44,6 +44,16 @@ Train requirements:
 	+ cleanup_train()
 		- delete tfrecods? free GPU mem
 
+Training results:
+	+ Solar
+		- TBA
+	+ MUSE
+		- TBD
+	+ Traffic
+		- TBD
+	+ Electricity, lpd5
+		- meh
+
 Extras:
 	+ pls add epoch progress bar - need total data len for this 
 		- Done. added primitive pb (as batch counter)
@@ -59,6 +69,7 @@ Extras:
 		- DONE
 	+ auto-tuned hyperparms script
 		- ...
-
-Training results:
-	+ TBA
+	+ attention_len > 16 => error. debug it
+		-
+	+ data unpacking differently in G Colab?????????????
+	+ comm code

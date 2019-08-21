@@ -38,6 +38,9 @@ def test(para, sess, model, data_generator):
                         elif outputs[b][p] < 0.5 and labels[b][p] >= 0.5:
                             fn += 1
             count += 1
+            if count % 25 == 0:
+                # print(count, end=' ')
+                logging.debug(count)
             n_samples += np.prod(outputs.shape)
         except:
             break
@@ -64,7 +67,7 @@ def test(para, sess, model, data_generator):
             F1 = 2 * precision * recall / (precision + recall)
         else:
             F1 = 0.0
-        logging.info('# of testing data: %d' % count * para.batch_size)
+        logging.info(f'# of testing data: {% count * para.batch_size}')
         logging.info('precision: %.5f' % precision)
         logging.info('recall: %.5f' % recall)
         logging.info('F1 score: %.5f' % F1)
