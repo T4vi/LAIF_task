@@ -64,7 +64,7 @@ def save_model(para, sess, model):
 #save model in folder pointed at by path as <name>.ckpt
 def save_weights(sess, model, path):
     #should add a timestamp or some unique ID
-    logging.debug(f'Saving model {name} at {path}')
+    logging.debug(f'Saving model as {path}')
     model.saver.save(sess, path)
 
 def print_num_of_trainable_parameters():

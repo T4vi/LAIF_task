@@ -1,5 +1,5 @@
 + Try to train and compare results with the ones in the paper 
-	- 2h+ for 1 epoch on muse with 3x338 and it didn't finish... Still TODO - Collab
+	- In Colab
 
 + We need to know how the data looks like and how users would create similar datasets. What's the format of annotation files, what is important.
 	- txt/csv with a '\t', ' ', ',' separator. Each series on a column. Should be the same length (pad with 0/smth if data not available)
@@ -9,10 +9,10 @@
 
 Inference requirements:
 	+ We need to be able to load a set of saved weights (from arbitrary local path)
-		- using load_weights, --initial_weights file path and first_epoch=True 
+		- Done. using load_weights, --initial_weights file path and first_epoch=True 
 
 	+ We need to be able to initialize historical data
-		- ????
+		- init LSTM params
 
 	+ Return predictions for the next K samples
 		- TODO:Try some other version maybe
@@ -41,8 +41,12 @@ Train requirements:
 		- Done. Takes (session, model, path, name). Could add some unique ID to the name
 
 	+ cleanup_train()
-		- 
+		- delete tfrecods? free GPU mem
 
 Extras:
-	- pls epoch progress bar
-	-
+	- pls epoch progress bar - get total data len 4 this -UPD: added primitive pb
+	- add validation every x epochs param
+	- skip the save/load model every epoch
+	- add tensorboard
+	- G Colab param, save temp locally, not in drive, etc
+	- plot metrics

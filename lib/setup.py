@@ -77,4 +77,5 @@ def config_setup():
     config = tf.ConfigProto()
     config.gpu_options.allow_growth = True
     config.allow_soft_placement = True
+    #config.log_device_placement=True
     return config
