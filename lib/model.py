@@ -31,13 +31,18 @@ class PolyRNN:
         self.rnn_inputs_embed = tf.nn.relu(
             dense(self.rnn_inputs, self.para.num_units))
 
+        #hidden units initial state
+        cell = self._build_rnn_cell()
+        #h = cell.zero_state(self.para.batch_size, dtype=tf.float32)
+        #initial_state = tf.contrib.rnn.LSTMStateTuple(c, h)
+
         # all_rnn_states: [batch_size, max_len, num_units]
         # final_rnn_states: [LSTMStateTuple], len = num_layers
         # LSTMStateTuple: (c: [batch_size, num_units],
         #                  h: [batch_size, num_units])
         self.rnn_inputs_embed = tf.unstack(self.rnn_inputs_embed, axis=1)
         self.all_rnn_states, self.final_rnn_states = tf.nn.static_rnn(
-            cell=self._build_rnn_cell(),
+            cell=cell,
             inputs=self.rnn_inputs_embed,
             sequence_length=self.rnn_inputs_len,
             dtype=self.dtype,

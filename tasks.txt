@@ -1,3 +1,4 @@
+General:
 + Try to train and compare results with the ones in the paper 
 	- WIP - In Colab
 
@@ -12,10 +13,10 @@ Inference requirements:
 		- Done. using load_weights, --initial_weights file path and first_epoch=True 
 
 	+ We need to be able to initialize historical data
-		- init LSTM params - HOW inside graph?
+		- init LSTM params - HOW inside graph with LSTMBlockCell??
 
 	+ Return predictions for the next K samples
-		- TODO:Try some other version maybe
+		- ?? TODO:Try some other version maybe
  	
 Train requirements:
 	+ We need to be able to load initialization weights (if none provided, start from random) before training
@@ -32,7 +33,7 @@ Train requirements:
 		- Done. By using the --split param, the data gets split into [split] % validation, [split] % testing, rest for training 
 
 	+ run_single_epoch()  # Uses train_split, outputs loss
-		- Done. TEST IT
+		- Done. TEST IT //can also just run as --epochs=1
 
 	+ run_validation()  # Uses test_split <validation_split?>, outputs metrics
 		- Done.
@@ -46,11 +47,18 @@ Train requirements:
 Extras:
 	+ pls add epoch progress bar - need total data len for this 
 		- Done. added primitive pb (as batch counter)
-	+ add validation every x epochs param
+	+ enable/disable/add validation every x epochs param
+		-
 	+ skip the save/load model every epoch 
 		- Poss only if validation is disabled
 	+ add tensorboard 
 		- Can't, need tf 2.0
-	+ G Colab param, save temp locally, not in drive, etc
-	+ plot metrics 
+	+ Optimize for G Colab, save temp on HDD, not in drive, etc
+		-
+	+ script for plotting metrics 
 		- DONE
+	+ auto-tuned hyperparms script
+		- ...
+
+Training results:
+	+ TBA
