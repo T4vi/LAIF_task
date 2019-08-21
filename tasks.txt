@@ -1,5 +1,5 @@
 + Try to train and compare results with the ones in the paper 
-	- In Colab
+	- WIP - In Colab
 
 + We need to know how the data looks like and how users would create similar datasets. What's the format of annotation files, what is important.
 	- txt/csv with a '\t', ' ', ',' separator. Each series on a column. Should be the same length (pad with 0/smth if data not available)
@@ -12,7 +12,7 @@ Inference requirements:
 		- Done. using load_weights, --initial_weights file path and first_epoch=True 
 
 	+ We need to be able to initialize historical data
-		- init LSTM params
+		- init LSTM params - HOW inside graph?
 
 	+ Return predictions for the next K samples
 		- TODO:Try some other version maybe
@@ -25,7 +25,7 @@ Train requirements:
 		- Done.
 
 	+ We need to be able to compute metrics on a validation dataset (provided in paper)
-		- switchable by using --mts
+		- Details. switchable by using --mts
 
   + We would like to have a certain granularity within this API:
 	+ prepare_train(train_split, test_split)
@@ -44,9 +44,13 @@ Train requirements:
 		- delete tfrecods? free GPU mem
 
 Extras:
-	- pls epoch progress bar - get total data len 4 this -UPD: added primitive pb
-	- add validation every x epochs param
-	- skip the save/load model every epoch
-	- add tensorboard
-	- G Colab param, save temp locally, not in drive, etc
-	- plot metrics
+	+ pls add epoch progress bar - need total data len for this 
+		- Done. added primitive pb (as batch counter)
+	+ add validation every x epochs param
+	+ skip the save/load model every epoch 
+		- Poss only if validation is disabled
+	+ add tensorboard 
+		- Can't, need tf 2.0
+	+ G Colab param, save temp locally, not in drive, etc
+	+ plot metrics 
+		- DONE
