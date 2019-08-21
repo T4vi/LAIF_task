@@ -6,7 +6,6 @@ def predict(para, sess, model, file_path, samples):
 
 	#batch_size = 1, mode = 'predict', samples > 0 < ?, initial_weights
 
-
     logging.info(f'Loading data from {file_path}')
 
     #dataset = tf.data.TFRecordDataset(file_path)
@@ -21,8 +20,8 @@ def predict(para, sess, model, file_path, samples):
     raw_dat = tf.expand_dims(raw_dat, 0)
 
     for k in range(samples):
-    	sess.run(self.iterator.initializer, feed_dict={ x: raw_dat })
-    	outputs = sess.run(fetches=[model.all_rnn_outputs])
+    	sess.run(self.iterator.initializer)
+    	outputs = sess.run(fetches=[model.all_rnn_outputs], feed_dict={ x: raw_dat })
     	raw_dat = tf.concat([raw_dat[:-1], outputs], 0)
 
     return tf.concat([raw_dat[-samples+1:], outputs])

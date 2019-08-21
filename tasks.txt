@@ -1,5 +1,5 @@
 + Try to train and compare results with the ones in the paper 
-	- 2h+ for 1 epoch on muse with 3x338 and it didn't finish... Still TODO
+	- 2h+ for 1 epoch on muse with 3x338 and it didn't finish... Still TODO - Collab
 
 + We need to know how the data looks like and how users would create similar datasets. What's the format of annotation files, what is important.
 	- txt/csv with a '\t', ' ', ',' separator. Each series on a column. Should be the same length (pad with 0/smth if data not available)
@@ -41,4 +41,4 @@ Train requirements:
 		- Done. Takes (session, model, path, name). Could add some unique ID to the name
 
 	+ cleanup_train()
-		- Done if =Clean model weights
+		- 

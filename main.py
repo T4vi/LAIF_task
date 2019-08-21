@@ -8,6 +8,7 @@ from lib.train import train
 from lib.test import test
 from lib.predict import predict
 
+#tf.enable_eager_execution()
 
 def main():
     para = params_setup()
