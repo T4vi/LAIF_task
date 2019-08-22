@@ -60,8 +60,8 @@ def test(para, sess, model, data_generator):
             np.sqrt(test_rse / n_samples) / data_generator.rse
         )
         logging.info("test rse: %.5f, test corr: %.5f" % (test_rse, test_corr))
-    else:
-         if (tp != 0 or fp != 0):
+    elif para.data_set == 'muse' or para.data_set == 'lpd5':
+        if (tp != 0 or fp != 0):
             precision = tp / (tp + fp)
         else:
             precision = 0
