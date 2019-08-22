@@ -42,27 +42,27 @@ Train requirements:
 		- Done. Takes (session, model, path, name). Could add some unique ID to the name
 
 	+ cleanup_train()
-		- delete tfrecods? free GPU mem
+		- free GPU mem
 
 Training results:
 	+ Solar
-		- TBA
+		- Done. In Drive
 	+ MUSE
-		- TBD
+		- Done. In Drive
 	+ Traffic
-		- TBD
+		- Done. In Drive
 	+ Electricity, lpd5
 		- meh
 
 Extras:
 	+ pls add epoch progress bar - need total data len for this 
-		- Done. added primitive pb (as batch counter)
+		- Done. added primitive progrees bar (as batch counter)
 	+ enable/disable/add validation every x epochs param
-		-
+		- 
 	+ skip the save/load model every epoch 
 		- Poss only if validation is disabled
 	+ add tensorboard 
-		- Can't, need tf 2.0
+		- need tf 2.0
 	+ Optimize for G Colab, save temp on HDD, not in drive, etc
 		-
 	+ script for plotting metrics 
@@ -74,3 +74,4 @@ Extras:
 	+ data unpacking differently in G Colab?????????????
 	+ comm code
 	+ compute val metrics for music datasets while running
+		- Done

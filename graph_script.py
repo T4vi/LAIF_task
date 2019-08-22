@@ -2,7 +2,7 @@ import re
 import numpy as np
 import matplotlib.pyplot as plt
 
-with open('results_EL_16_85_3_45.txt') as f:
+with open('results_TF_16_XX_3_128.txt') as f:
     text = f.read().strip()
 
 tr_loss 	= np.asarray(re.findall('(?<=, loss: )\d.\d*', text), dtype=np.float32)

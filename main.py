@@ -37,7 +37,7 @@ def main():
                 test(para, sess, model, data_generator)
             elif para.mode == 'predict':
                 logging.info('Predicting')
-                predict(para, sess, model, './data/solar-energy3/solar_predict.txt', 10)
+                predict(para, sess, model, data_generator, './data/solar-energy3/solar_predict.txt', 10)
 
 
         except KeyboardInterrupt:

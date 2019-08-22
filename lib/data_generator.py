@@ -32,12 +32,7 @@ class DataGenerator(metaclass=ABCMeta):
         batch_size: Number of examples per returned batch.
         num_epochs: Number of times to read the input data, or 0/None to
         train forever.
-        Returns:
-        A tuple (images, labels), where:
-        * images is a float tensor with shape [batch_size, 28, 28]
-        in the range [0.0, 1.0].
-        * labels is an int32 tensor with shape [batch_size] with the true label,
-        a number in the range [0, mnist.NUM_CLASSES).
+        
         This function creates a one_shot_iterator, meaning that it will only iterate
         over the dataset once. On the other hand there is no special initialization
         required.
@@ -46,7 +41,7 @@ class DataGenerator(metaclass=ABCMeta):
             x = tf.placeholder(tf.float32, shape=[None, self.para.attention_len])
             dataset = tf.data.Dataset.from_tensor_slices(x)
 
-            self.iterator = dataset.make_initializable_iterator()
+            self.iterator = dataset.batch(1).make_initializable_iterator()
             return self.iterator.get_next()
 
         if mode != "train" and mode != "validation" and mode != "test":
