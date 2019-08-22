@@ -2,7 +2,7 @@ import re
 import numpy as np
 import matplotlib.pyplot as plt
 
-with open('..//../file.txt') as f:
+with open('results_EL_16_85_3_45.txt') as f:
     text = f.read().strip()
 
 tr_loss 	= np.asarray(re.findall('(?<=, loss: )\d.\d*', text), dtype=np.float32)
@@ -41,9 +41,11 @@ if (training_stats['val_rse'].shape[0] != 0):
 	plt.figure(2)
 	plt.title('Val/Test RSE (B) and CORR (R)')
 	plt.plot(training_stats['val_rse'], 'b-')
-	plt.plot(len(training_stats['val_rse'])-1, training_stats['test_rse'][:1], 'k+')
+	if (training_stats['test_rse'].shape[0] != 0):
+		plt.plot(len(training_stats['val_rse'])-1, training_stats['test_rse'][-1:], 'k+')
 	plt.plot(training_stats['val_corr'], 'r-')
-	plt.plot(len(training_stats['val_corr'])-1, training_stats['test_corr'][:1], 'k+')
+	if (training_stats['test_corr'].shape[0] != 0):
+		plt.plot(len(training_stats['val_corr'])-1, training_stats['test_corr'][-1:], 'k+')
 	plt.ylabel('Validation and Test RSE (B) and CORR (R)')
 	plt.xlabel('Epochs')
 elif (training_stats['test_p'][0] != 0):
@@ -53,5 +55,6 @@ elif (training_stats['test_p'][0] != 0):
 
 plt.show()
 
+#TODO: plot P, R, F1
 #TODO: save data to file 
 #TODO: add poss to load and plot from (data only) file
