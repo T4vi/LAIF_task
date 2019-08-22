@@ -61,13 +61,16 @@ def test(para, sess, model, data_generator):
         )
         logging.info("test rse: %.5f, test corr: %.5f" % (test_rse, test_corr))
     else:
-        precision = tp / (tp + fp)
+         if (tp != 0 or fp != 0):
+            precision = tp / (tp + fp)
+        else:
+            precision = 0
         recall = tp / (tp + fn)
         if precision + recall >= 1e-6:
             F1 = 2 * precision * recall / (precision + recall)
         else:
             F1 = 0.0
-        logging.info(f'# of testing data: {% count * para.batch_size}')
+        logging.info(f'# of testing data: {count * para.batch_size}')
         logging.info('precision: %.5f' % precision)
         logging.info('recall: %.5f' % recall)
         logging.info('F1 score: %.5f' % F1)

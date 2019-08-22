@@ -48,6 +48,7 @@ def train(para, sess, model, train_data_generator):
             valid_sess.run(valid_data_generator.iterator.initializer)
             valid_loss = 0.0
             valid_rse = 0.0
+            tp, fp, tn, fn = 0, 0, 0, 0
             count = 0
             n_samples = 0
             all_outputs, all_labels = [], []
@@ -65,6 +66,21 @@ def train(para, sess, model, train_data_generator):
                         all_outputs.append(outputs)
                         all_labels.append(labels)
                         n_samples += np.prod(outputs.shape)
+                    elif para.data_set == 'muse' or para.data_set == 'lpd5':
+                        # print(np.shape(outputs))
+                        # print(np.shape(labels))
+                        # print(para.batch_size)
+                        for b in range(np.shape(outputs)[0]):  ##era para.batchsize, da' ultimul batch avea mai putine el
+                            for p in range(128):
+                                if outputs[b][p] >= 0.5 and labels[b][p] >= 0.5:
+                                    tp += 1
+                                elif outputs[b][p] >= 0.5 and labels[b][p] < 0.5:
+                                    fp += 1
+                                elif outputs[b][p] < 0.5 and labels[b][p] < 0.5:
+                                    tn += 1
+                                elif outputs[b][p] < 0.5 and labels[b][p] >= 0.5:
+                                    fn += 1
+                        # print([tp, fp, tn, fn])
                     valid_loss += loss
                     count += 1
                 except tf.errors.OutOfRangeError:
@@ -87,8 +103,21 @@ def train(para, sess, model, train_data_generator):
                 logging.info(
                     "validation loss: %.5f, validation rse: %.5f, validation corr: %.5f",
                     valid_loss, valid_rse, valid_corr)
-            else:
-                logging.info("validation loss: %.5f", valid_loss / count)
+            
+            elif para.data_set == 'muse' or para.data_set == 'lpd5':
+                if (tp != 0 or fp != 0):
+                    precision = tp / (tp + fp)
+                else:
+                    precision = 0
+                recall = tp / (tp + fn)
+                if precision + recall >= 1e-6:
+                    F1 = 2 * precision * recall / (precision + recall)
+                else:
+                    F1 = 0.0
+                logging.info('validation loss: %.5f', valid_loss / count)
+                logging.info('precision: %.5f', precision)
+                logging.info('recall: %.5f', recall)
+                logging.info('F1 score: %.5f', F1)
 
         #save only the last model
         #save_model(para, sess, model)
