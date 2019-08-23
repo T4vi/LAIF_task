@@ -1,0 +1,2134 @@
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Imageio: 'ffmpeg-linux64-v3.3.1' was not found on your computer; downloading it now.
+Try 1. Download from https://github.com/imageio/imageio-binaries/raw/master/ffmpeg/ffmpeg-linux64-v3.3.1 (43.8 MB)
+Downloading: 45929032/45929032 bytes (100.0%)
+  Done
+File saved as /root/.imageio/ffmpeg/ffmpeg-linux64-v3.3.1.
+Creating graph
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/train.tfrecords
+Building optimizer
+2019-08-22 23:05:56.718724: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-08-22 23:05:56.720819: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1903100 executing computations on platform Host. Devices:
+2019-08-22 23:05:56.720857: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-08-22 23:05:56.726514: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-08-22 23:05:56.859623: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 23:05:56.860174: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1902d80 executing computations on platform CUDA. Devices:
+2019-08-22 23:05:56.860211: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2019-08-22 23:05:56.860463: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 23:05:56.860880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:04.0
+2019-08-22 23:05:56.873930: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 23:05:57.050677: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 23:05:57.142063: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 23:05:57.164993: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 23:05:57.372231: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 23:05:57.485238: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 23:05:57.822385: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 23:05:57.822735: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 23:05:57.823280: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 23:05:57.823654: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 23:05:57.826682: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 23:05:57.829129: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 23:05:57.829166: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 23:05:57.829184: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 23:05:57.831325: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 23:05:57.831870: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 23:05:57.832288: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10801 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7)
+2019-08-22 23:05:59.174793: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Loading weights
+Loading model with fresh parameters
+# of trainable parameters: 6070963
+Started training
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/validation.tfrecords
+2019-08-22 23:06:30.863296: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 23:06:30.863788: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:04.0
+2019-08-22 23:06:30.863895: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 23:06:30.863954: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 23:06:30.864002: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 23:06:30.864061: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 23:06:30.864108: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 23:06:30.864152: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 23:06:30.864198: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 23:06:30.864353: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 23:06:30.864846: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 23:06:30.865197: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 23:06:30.865249: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 23:06:30.865273: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 23:06:30.865290: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 23:06:30.865626: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 23:06:30.866088: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 23:06:30.866456: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10801 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7)
+
+
+Epoch: 1
+2019-08-22 23:06:49.194604: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 23:07:01.639589: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 1 of 1096
+2019-08-22 23:07:01.958966: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:162] Shuffle buffer filled.
+2019-08-22 23:07:02.339657: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+
+
+Epoch: 2
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+
+
+Epoch: 3
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+
+
+Epoch: 4
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+
+
+Epoch: 5
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+
+
+Epoch: 6
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+
+
+Epoch: 7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+
+Epoch: 8
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+
+
+Epoch: 9
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+
+
+Epoch: 10
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+
+
+Epoch: 11
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 3619, loss: 0.65339, epoch time: 64.521s
+Saving model, step 3619
+Loading saved model from ../../models/model_tf2/model.ckpt-3619
+validation loss: 0.21370, validation rse: 3.41972, validation corr: 0.02934
+
+
+Epoch: 12
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 3948, loss: 0.35077, epoch time: 64.584s
+Saving model, step 3948
+Loading saved model from ../../models/model_tf2/model.ckpt-3948
+validation loss: 0.10874, validation rse: 1.76721, validation corr: 0.07419
+
+
+Epoch: 13
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 4277, loss: 0.25973, epoch time: 63.872s
+Saving model, step 4277
+Loading saved model from ../../models/model_tf2/model.ckpt-4277
+validation loss: 0.08136, validation rse: 1.34326, validation corr: 0.12263
+
+
+Epoch: 14
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 4606, loss: 0.22654, epoch time: 64.694s
+Saving model, step 4606
+Loading saved model from ../../models/model_tf2/model.ckpt-4606
+validation loss: 0.06910, validation rse: 1.17888, validation corr: 0.18407
+
+
+Epoch: 15
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 4935, loss: 0.20846, epoch time: 64.926s
+Saving model, step 4935
+Loading saved model from ../../models/model_tf2/model.ckpt-4935
+validation loss: 0.06462, validation rse: 1.11160, validation corr: 0.25514
+
+
+Epoch: 16
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 5264, loss: 0.19611, epoch time: 64.432s
+Saving model, step 5264
+Loading saved model from ../../models/model_tf2/model.ckpt-5264
+validation loss: 0.05625, validation rse: 1.00491, validation corr: 0.33115
+
+
+Epoch: 17
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 5593, loss: 0.18658, epoch time: 64.020s
+Saving model, step 5593
+Loading saved model from ../../models/model_tf2/model.ckpt-5593
+validation loss: 0.05457, validation rse: 0.97826, validation corr: 0.40123
+
+
+Epoch: 18
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 5922, loss: 0.17818, epoch time: 64.234s
+Saving model, step 5922
+Loading saved model from ../../models/model_tf2/model.ckpt-5922
+validation loss: 0.05353, validation rse: 0.95537, validation corr: 0.46194
+
+
+Epoch: 19
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 6251, loss: 0.17144, epoch time: 64.620s
+Saving model, step 6251
+Loading saved model from ../../models/model_tf2/model.ckpt-6251
+validation loss: 0.05148, validation rse: 0.92872, validation corr: 0.50280
+
+
+Epoch: 20
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 6580, loss: 0.16530, epoch time: 64.589s
+Saving model, step 6580
+Loading saved model from ../../models/model_tf2/model.ckpt-6580
+validation loss: 0.04776, validation rse: 0.88652, validation corr: 0.53576
+
+
+Epoch: 21
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 6909, loss: 0.15952, epoch time: 64.636s
+Saving model, step 6909
+Loading saved model from ../../models/model_tf2/model.ckpt-6909
+validation loss: 0.04642, validation rse: 0.85786, validation corr: 0.56067
+
+
+Epoch: 22
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 7238, loss: 0.15420, epoch time: 64.391s
+Saving model, step 7238
+Loading saved model from ../../models/model_tf2/model.ckpt-7238
+validation loss: 0.04590, validation rse: 0.86013, validation corr: 0.57209
+
+
+Epoch: 23
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 7567, loss: 0.14886, epoch time: 64.162s
+Saving model, step 7567
+Loading saved model from ../../models/model_tf2/model.ckpt-7567
+validation loss: 0.04523, validation rse: 0.84421, validation corr: 0.57795
+
+
+Epoch: 24
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 7896, loss: 0.14289, epoch time: 64.172s
+Saving model, step 7896
+Loading saved model from ../../models/model_tf2/model.ckpt-7896
+validation loss: 0.04603, validation rse: 0.86047, validation corr: 0.55934
+
+
+Epoch: 25
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 8225, loss: 0.11886, epoch time: 64.794s
+Saving model, step 8225
+Loading saved model from ../../models/model_tf2/model.ckpt-8225
+validation loss: 0.04233, validation rse: 0.80448, validation corr: 0.59581
+
+
+Epoch: 26
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 8554, loss: 0.10081, epoch time: 148.897s
+Saving model, step 8554
+Loading saved model from ../../models/model_tf2/model.ckpt-8554
+validation loss: 0.04247, validation rse: 0.81295, validation corr: 0.61660
+
+
+Epoch: 27
+2019-08-22 23:40:35.434986: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 634 of 1096
+2019-08-22 23:40:35.575351: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:162] Shuffle buffer filled.
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 8883, loss: 0.09819, epoch time: 67.828s
+Saving model, step 8883
+Loading saved model from ../../models/model_tf2/model.ckpt-8883
+validation loss: 0.04106, validation rse: 0.80537, validation corr: 0.61779
+
+
+Epoch: 28
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 9212, loss: 0.07066, epoch time: 65.242s
+Saving model, step 9212
+Loading saved model from ../../models/model_tf2/model.ckpt-9212
+validation loss: 0.03851, validation rse: 0.77008, validation corr: 0.64013
+
+
+Epoch: 29
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 9541, loss: 0.07537, epoch time: 63.869s
+Saving model, step 9541
+Loading saved model from ../../models/model_tf2/model.ckpt-9541
+validation loss: 0.03736, validation rse: 0.76890, validation corr: 0.65454
+
+
+Epoch: 30
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 9870, loss: 0.07302, epoch time: 65.021s
+Saving model, step 9870
+Loading saved model from ../../models/model_tf2/model.ckpt-9870
+validation loss: 0.03445, validation rse: 0.73796, validation corr: 0.66543
+
+
+Epoch: 31
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 10199, loss: 0.07187, epoch time: 64.043s
+Saving model, step 10199
+Loading saved model from ../../models/model_tf2/model.ckpt-10199
+validation loss: 0.03469, validation rse: 0.73233, validation corr: 0.67109
+
+
+Epoch: 32
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 10528, loss: 0.04969, epoch time: 64.390s
+Saving model, step 10528
+Loading saved model from ../../models/model_tf2/model.ckpt-10528
+validation loss: 0.03478, validation rse: 0.74995, validation corr: 0.67629
+
+
+Epoch: 33
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 10857, loss: 0.04689, epoch time: 64.125s
+Saving model, step 10857
+Loading saved model from ../../models/model_tf2/model.ckpt-10857
+validation loss: 0.03275, validation rse: 0.73244, validation corr: 0.68664
+
+
+Epoch: 34
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 11186, loss: 0.04439, epoch time: 64.704s
+Saving model, step 11186
+Loading saved model from ../../models/model_tf2/model.ckpt-11186
+validation loss: 0.03346, validation rse: 0.72159, validation corr: 0.68568
+
+
+Epoch: 35
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 11515, loss: 0.04057, epoch time: 65.127s
+Saving model, step 11515
+Loading saved model from ../../models/model_tf2/model.ckpt-11515
+validation loss: 0.03229, validation rse: 0.73277, validation corr: 0.68835
+
+
+Epoch: 36
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 11844, loss: 0.03776, epoch time: 64.316s
+Saving model, step 11844
+Loading saved model from ../../models/model_tf2/model.ckpt-11844
+validation loss: 0.03206, validation rse: 0.72430, validation corr: 0.69156
+
+
+Epoch: 37
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 12173, loss: 0.03680, epoch time: 64.210s
+Saving model, step 12173
+Loading saved model from ../../models/model_tf2/model.ckpt-12173
+validation loss: 0.03078, validation rse: 0.71405, validation corr: 0.69393
+
+
+Epoch: 38
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 12502, loss: 0.04280, epoch time: 64.757s
+Saving model, step 12502
+Loading saved model from ../../models/model_tf2/model.ckpt-12502
+validation loss: 0.03044, validation rse: 0.71222, validation corr: 0.69338
+
+
+Epoch: 39
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 12831, loss: 0.03442, epoch time: 64.543s
+Saving model, step 12831
+Loading saved model from ../../models/model_tf2/model.ckpt-12831
+validation loss: 0.03198, validation rse: 0.73274, validation corr: 0.69777
+
+
+Epoch: 40
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 13160, loss: 0.03363, epoch time: 64.547s
+Saving model, step 13160
+Loading saved model from ../../models/model_tf2/model.ckpt-13160
+validation loss: 0.03178, validation rse: 0.73637, validation corr: 0.70047
+
+
+Epoch: 41
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 13489, loss: 0.03298, epoch time: 64.640s
+Saving model, step 13489
+Loading saved model from ../../models/model_tf2/model.ckpt-13489
+validation loss: 0.03191, validation rse: 0.73125, validation corr: 0.70228
+
+
+Epoch: 42
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 13818, loss: 0.03229, epoch time: 64.255s
+Saving model, step 13818
+Loading saved model from ../../models/model_tf2/model.ckpt-13818
+validation loss: 0.03120, validation rse: 0.73481, validation corr: 0.70199
+
+
+Epoch: 43
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 14147, loss: 0.03157, epoch time: 64.022s
+Saving model, step 14147
+Loading saved model from ../../models/model_tf2/model.ckpt-14147
+validation loss: 0.02959, validation rse: 0.71033, validation corr: 0.70328
+
+
+Epoch: 44
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 14476, loss: 0.03024, epoch time: 63.755s
+Saving model, step 14476
+Loading saved model from ../../models/model_tf2/model.ckpt-14476
+validation loss: 0.03035, validation rse: 0.72273, validation corr: 0.70737
+
+
+Epoch: 45
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 14805, loss: 0.02949, epoch time: 64.709s
+Saving model, step 14805
+Loading saved model from ../../models/model_tf2/model.ckpt-14805
+validation loss: 0.02928, validation rse: 0.69660, validation corr: 0.71259
+
+
+Epoch: 46
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 15134, loss: 0.02910, epoch time: 63.757s
+Saving model, step 15134
+Loading saved model from ../../models/model_tf2/model.ckpt-15134
+validation loss: 0.02973, validation rse: 0.71600, validation corr: 0.71501
+
+
+Epoch: 47
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 15463, loss: 0.03151, epoch time: 65.028s
+Saving model, step 15463
+Loading saved model from ../../models/model_tf2/model.ckpt-15463
+validation loss: 0.02888, validation rse: 0.69225, validation corr: 0.71725
+
+
+Epoch: 48
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 15792, loss: 0.02839, epoch time: 64.482s
+Saving model, step 15792
+Loading saved model from ../../models/model_tf2/model.ckpt-15792
+validation loss: 0.02839, validation rse: 0.67947, validation corr: 0.72274
+
+
+Epoch: 49
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 16121, loss: 0.02812, epoch time: 63.948s
+Saving model, step 16121
+Loading saved model from ../../models/model_tf2/model.ckpt-16121
+validation loss: 0.02840, validation rse: 0.68620, validation corr: 0.73133
+
+
+Epoch: 50
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 16450, loss: 0.02843, epoch time: 65.171s
+Saving model, step 16450
+Loading saved model from ../../models/model_tf2/model.ckpt-16450
+validation loss: 0.02885, validation rse: 0.66948, validation corr: 0.73467
+
+
+Epoch: 51
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 16779, loss: 0.02730, epoch time: 64.590s
+Saving model, step 16779
+Loading saved model from ../../models/model_tf2/model.ckpt-16779
+validation loss: 0.02818, validation rse: 0.67566, validation corr: 0.74013
+
+
+Epoch: 52
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 17108, loss: 0.02664, epoch time: 145.812s
+Saving model, step 17108
+Loading saved model from ../../models/model_tf2/model.ckpt-17108
+validation loss: 0.02779, validation rse: 0.65903, validation corr: 0.74416
+
+
+Epoch: 53
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 17437, loss: 0.02738, epoch time: 64.015s
+Saving model, step 17437
+Loading saved model from ../../models/model_tf2/model.ckpt-17437
+validation loss: 0.02769, validation rse: 0.65434, validation corr: 0.74858
+
+
+Epoch: 54
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 17766, loss: 0.02621, epoch time: 63.979s
+Saving model, step 17766
+Loading saved model from ../../models/model_tf2/model.ckpt-17766
+validation loss: 0.02859, validation rse: 0.67543, validation corr: 0.74942
+
+
+Epoch: 55
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 18095, loss: 0.02822, epoch time: 64.401s
+Saving model, step 18095
+Loading saved model from ../../models/model_tf2/model.ckpt-18095
+validation loss: 0.02675, validation rse: 0.64781, validation corr: 0.75269
+
+
+Epoch: 56
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 18424, loss: 0.02565, epoch time: 64.291s
+Saving model, step 18424
+Loading saved model from ../../models/model_tf2/model.ckpt-18424
+validation loss: 0.02726, validation rse: 0.66247, validation corr: 0.75251
+
+
+Epoch: 57
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 18753, loss: 0.02616, epoch time: 63.890s
+Saving model, step 18753
+Loading saved model from ../../models/model_tf2/model.ckpt-18753
+validation loss: 0.02729, validation rse: 0.65360, validation corr: 0.75369
+
+
+Epoch: 58
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 19082, loss: 0.02606, epoch time: 64.055s
+Saving model, step 19082
+Loading saved model from ../../models/model_tf2/model.ckpt-19082
+validation loss: 0.02670, validation rse: 0.64044, validation corr: 0.75650
+
+
+Epoch: 59
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 19411, loss: 0.02503, epoch time: 64.665s
+Saving model, step 19411
+Loading saved model from ../../models/model_tf2/model.ckpt-19411
+validation loss: 0.02675, validation rse: 0.62918, validation corr: 0.75879
+
+
+Epoch: 60
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 19740, loss: 0.02476, epoch time: 64.519s
+Saving model, step 19740
+Loading saved model from ../../models/model_tf2/model.ckpt-19740
+validation loss: 0.02682, validation rse: 0.63904, validation corr: 0.75631
+
+
+Epoch: 61
+2019-08-23 00:23:47.666816: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 1 of 1096
+2019-08-23 00:23:47.995451: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:162] Shuffle buffer filled.
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 20069, loss: 0.02460, epoch time: 68.714s
+Saving model, step 20069
+Loading saved model from ../../models/model_tf2/model.ckpt-20069
+validation loss: 0.02698, validation rse: 0.63925, validation corr: 0.76101
+
+
+Epoch: 62
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 20398, loss: 0.02441, epoch time: 64.258s
+Saving model, step 20398
+Loading saved model from ../../models/model_tf2/model.ckpt-20398
+validation loss: 0.02658, validation rse: 0.63569, validation corr: 0.75839
+
+
+Epoch: 63
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 20727, loss: 0.02500, epoch time: 64.422s
+Saving model, step 20727
+Loading saved model from ../../models/model_tf2/model.ckpt-20727
+validation loss: 0.02790, validation rse: 0.65802, validation corr: 0.76054
+
+
+Epoch: 64
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 21056, loss: 0.02419, epoch time: 64.455s
+Saving model, step 21056
+Loading saved model from ../../models/model_tf2/model.ckpt-21056
+validation loss: 0.02704, validation rse: 0.62745, validation corr: 0.76265
+
+
+Epoch: 65
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 21385, loss: 0.02399, epoch time: 66.622s
+Saving model, step 21385
+Loading saved model from ../../models/model_tf2/model.ckpt-21385
+validation loss: 0.02655, validation rse: 0.63690, validation corr: 0.76521
+
+
+Epoch: 66
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 21714, loss: 0.02372, epoch time: 146.695s
+Saving model, step 21714
+Loading saved model from ../../models/model_tf2/model.ckpt-21714
+validation loss: 0.02777, validation rse: 1.79460, validation corr: 0.38236
+
+
+Epoch: 67
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 22043, loss: 0.02372, epoch time: 63.957s
+Saving model, step 22043
+Loading saved model from ../../models/model_tf2/model.ckpt-22043
+validation loss: 0.02554, validation rse: 0.62081, validation corr: 0.76878
+
+
+Epoch: 68
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 22372, loss: 0.02372, epoch time: 64.391s
+Saving model, step 22372
+Loading saved model from ../../models/model_tf2/model.ckpt-22372
+validation loss: 0.02655, validation rse: 0.63000, validation corr: 0.76771
+
+
+Epoch: 69
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 22701, loss: 0.02357, epoch time: 64.688s
+Saving model, step 22701
+Loading saved model from ../../models/model_tf2/model.ckpt-22701
+validation loss: 0.02602, validation rse: 0.61615, validation corr: 0.76722
+
+
+Epoch: 70
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 23030, loss: 0.02336, epoch time: 65.178s
+Saving model, step 23030
+Loading saved model from ../../models/model_tf2/model.ckpt-23030
+validation loss: 0.02684, validation rse: 0.63786, validation corr: 0.76754
+
+
+Epoch: 71
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 23359, loss: 0.02321, epoch time: 64.561s
+Saving model, step 23359
+Loading saved model from ../../models/model_tf2/model.ckpt-23359
+validation loss: 0.02563, validation rse: 0.61257, validation corr: 0.76996
+
+
+Epoch: 72
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 23688, loss: 0.02296, epoch time: 64.426s
+Saving model, step 23688
+Loading saved model from ../../models/model_tf2/model.ckpt-23688
+validation loss: 0.02620, validation rse: 0.62834, validation corr: 0.77029
+
+
+Epoch: 73
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 24017, loss: 0.02285, epoch time: 63.745s
+Saving model, step 24017
+Loading saved model from ../../models/model_tf2/model.ckpt-24017
+validation loss: 0.02601, validation rse: 0.62523, validation corr: 0.76916
+
+
+Epoch: 74
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 24346, loss: 0.02270, epoch time: 64.517s
+Saving model, step 24346
+Loading saved model from ../../models/model_tf2/model.ckpt-24346
+validation loss: 0.02536, validation rse: 0.62673, validation corr: 0.77246
+
+
+Epoch: 75
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 24675, loss: 0.02264, epoch time: 65.493s
+Saving model, step 24675
+Loading saved model from ../../models/model_tf2/model.ckpt-24675
+validation loss: 0.02630, validation rse: 0.63936, validation corr: 0.77187
+
+
+Epoch: 76
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 25004, loss: 0.02252, epoch time: 64.257s
+Saving model, step 25004
+Loading saved model from ../../models/model_tf2/model.ckpt-25004
+validation loss: 0.02649, validation rse: 0.63130, validation corr: 0.77084
+
+
+Epoch: 77
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 25333, loss: 0.02242, epoch time: 64.444s
+Saving model, step 25333
+Loading saved model from ../../models/model_tf2/model.ckpt-25333
+validation loss: 0.02528, validation rse: 0.62044, validation corr: 0.77455
+
+
+Epoch: 78
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 25662, loss: 0.02228, epoch time: 64.893s
+Saving model, step 25662
+Loading saved model from ../../models/model_tf2/model.ckpt-25662
+validation loss: 0.02768, validation rse: 0.64190, validation corr: 0.77149
+
+
+Epoch: 79
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 25991, loss: 0.02217, epoch time: 64.424s
+Saving model, step 25991
+Loading saved model from ../../models/model_tf2/model.ckpt-25991
+validation loss: 0.02523, validation rse: 0.61626, validation corr: 0.76936
+
+
+Epoch: 80
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 26320, loss: 0.02208, epoch time: 64.677s
+Saving model, step 26320
+Loading saved model from ../../models/model_tf2/model.ckpt-26320
+validation loss: 0.02526, validation rse: 0.61602, validation corr: 0.77430
+
+
+Epoch: 81
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 26649, loss: 0.02200, epoch time: 64.722s
+Saving model, step 26649
+Loading saved model from ../../models/model_tf2/model.ckpt-26649
+validation loss: 0.05509, validation rse: 28.78814, validation corr: 0.04618
+
+
+Epoch: 82
+2019-08-23 00:51:20.815906: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 1 of 1096
+2019-08-23 00:51:21.144077: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:162] Shuffle buffer filled.
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 26978, loss: 0.02192, epoch time: 76.304s
+Saving model, step 26978
+Loading saved model from ../../models/model_tf2/model.ckpt-26978
+validation loss: 0.02555, validation rse: 0.62280, validation corr: 0.77605
+
+
+Epoch: 83
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 27307, loss: 0.02177, epoch time: 64.625s
+Saving model, step 27307
+Loading saved model from ../../models/model_tf2/model.ckpt-27307
+validation loss: 0.02508, validation rse: 0.61486, validation corr: 0.77585
+
+
+Epoch: 84
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 27636, loss: 0.02869, epoch time: 66.741s
+Saving model, step 27636
+Loading saved model from ../../models/model_tf2/model.ckpt-27636
+validation loss: 0.02487, validation rse: 0.61183, validation corr: 0.77625
+
+
+Epoch: 85
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 27965, loss: 0.02159, epoch time: 64.607s
+Saving model, step 27965
+Loading saved model from ../../models/model_tf2/model.ckpt-27965
+validation loss: 0.02510, validation rse: 0.61749, validation corr: 0.77363
+
+
+Epoch: 86
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 28294, loss: 0.02144, epoch time: 65.781s
+Saving model, step 28294
+Loading saved model from ../../models/model_tf2/model.ckpt-28294
+validation loss: 0.02460, validation rse: 0.60657, validation corr: 0.77853
+
+
+Epoch: 87
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 28623, loss: 0.02142, epoch time: 64.587s
+Saving model, step 28623
+Loading saved model from ../../models/model_tf2/model.ckpt-28623
+validation loss: 0.02496, validation rse: 0.61279, validation corr: 0.77779
+
+
+Epoch: 88
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 28952, loss: 0.02117, epoch time: 64.708s
+Saving model, step 28952
+Loading saved model from ../../models/model_tf2/model.ckpt-28952
+validation loss: 0.02526, validation rse: 0.60844, validation corr: 0.77564
+
+
+Epoch: 89
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 29281, loss: 0.02106, epoch time: 64.611s
+Saving model, step 29281
+Loading saved model from ../../models/model_tf2/model.ckpt-29281
+validation loss: 0.02545, validation rse: 0.62124, validation corr: 0.77956
+
+
+Epoch: 90
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 29610, loss: 0.02107, epoch time: 64.652s
+Saving model, step 29610
+Loading saved model from ../../models/model_tf2/model.ckpt-29610
+validation loss: 0.02490, validation rse: 0.62621, validation corr: 0.78036
+
+
+Epoch: 91
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 29939, loss: 0.02079, epoch time: 146.844s
+Saving model, step 29939
+Loading saved model from ../../models/model_tf2/model.ckpt-29939
+validation loss: 0.02427, validation rse: 0.60669, validation corr: 0.77226
+
+
+Epoch: 92
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 30268, loss: 0.02075, epoch time: 64.053s
+Saving model, step 30268
+Loading saved model from ../../models/model_tf2/model.ckpt-30268
+validation loss: 0.02481, validation rse: 0.61261, validation corr: 0.78248
+
+
+Epoch: 93
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 30597, loss: 0.02063, epoch time: 65.027s
+Saving model, step 30597
+Loading saved model from ../../models/model_tf2/model.ckpt-30597
+validation loss: 0.09393, validation rse: 65.52145, validation corr: 0.03684
+
+
+Epoch: 94
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 30926, loss: 0.02069, epoch time: 65.740s
+Saving model, step 30926
+Loading saved model from ../../models/model_tf2/model.ckpt-30926
+validation loss: 0.02476, validation rse: 0.61413, validation corr: 0.78283
+
+
+Epoch: 95
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 31255, loss: 0.02039, epoch time: 156.034s
+Saving model, step 31255
+Loading saved model from ../../models/model_tf2/model.ckpt-31255
+validation loss: 0.02410, validation rse: 0.60376, validation corr: 0.78240
+
+
+Epoch: 96
+2019-08-23 01:11:53.956914: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 1 of 1096
+2019-08-23 01:11:54.301339: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:162] Shuffle buffer filled.
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 31584, loss: 0.02020, epoch time: 71.447s
+Saving model, step 31584
+Loading saved model from ../../models/model_tf2/model.ckpt-31584
+validation loss: 0.02503, validation rse: 0.61432, validation corr: 0.78363
+
+
+Epoch: 97
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 31913, loss: 0.02021, epoch time: 64.875s
+Saving model, step 31913
+Loading saved model from ../../models/model_tf2/model.ckpt-31913
+validation loss: 0.02482, validation rse: 0.61531, validation corr: 0.78359
+
+
+Epoch: 98
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 32242, loss: 0.02016, epoch time: 64.704s
+Saving model, step 32242
+Loading saved model from ../../models/model_tf2/model.ckpt-32242
+validation loss: 0.02533, validation rse: 0.62606, validation corr: 0.78536
+
+
+Epoch: 99
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 32571, loss: 0.02017, epoch time: 64.029s
+Saving model, step 32571
+Loading saved model from ../../models/model_tf2/model.ckpt-32571
+validation loss: 0.02552, validation rse: 0.62235, validation corr: 0.78354
+
+
+Epoch: 100
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 32900, loss: 0.01998, epoch time: 64.407s
+Saving model, step 32900
+Loading saved model from ../../models/model_tf2/model.ckpt-32900
+validation loss: 0.02375, validation rse: 0.59719, validation corr: 0.78822
+Saving model as ./saved_models/TF_16_100_3_338
+Stop
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Creating graph
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/test.tfrecords
+2019-08-23 01:19:16.319045: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-08-23 01:19:16.319306: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x28cb480 executing computations on platform Host. Devices:
+2019-08-23 01:19:16.319346: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-08-23 01:19:16.341801: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-08-23 01:19:16.432169: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-23 01:19:16.432771: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x28cb100 executing computations on platform CUDA. Devices:
+2019-08-23 01:19:16.432816: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2019-08-23 01:19:16.433088: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-23 01:19:16.433473: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:04.0
+2019-08-23 01:19:16.438856: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-23 01:19:16.450712: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-23 01:19:16.454944: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-23 01:19:16.465276: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-23 01:19:16.475202: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-23 01:19:16.483045: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-23 01:19:16.496034: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-23 01:19:16.496260: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-23 01:19:16.496842: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-23 01:19:16.497202: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-23 01:19:16.497288: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-23 01:19:16.498737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-23 01:19:16.498771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-23 01:19:16.498796: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-23 01:19:16.499155: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-23 01:19:16.499654: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-23 01:19:16.500052: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10801 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7)
+2019-08-23 01:19:16.696258: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Loading weights
+Loading initial model from ./saved_models/TF_16_100_3_338
+# of trainable parameters: 6070963
+Started testing
+2019-08-23 01:19:29.339993: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-23 01:19:33.815193: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+test rse: 0.66395, test corr: 0.76903
+Stop

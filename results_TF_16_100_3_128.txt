@@ -1,0 +1,2837 @@
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Creating graph
+Downloading Time Series traffic data set...
+Starting new HTTPS connection (1): github.com:443
+https://github.com:443 "GET /laiguokun/multivariate-time-series-data/blob/master/traffic/traffic.txt.gz?raw=true HTTP/1.1" 302 None
+https://github.com:443 "GET /laiguokun/multivariate-time-series-data/raw/master/traffic/traffic.txt.gz HTTP/1.1" 302 169
+Starting new HTTPS connection (1): raw.githubusercontent.com:443
+https://raw.githubusercontent.com:443 "GET /laiguokun/multivariate-time-series-data/master/traffic/traffic.txt.gz HTTP/1.1" 200 29310512
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+100% 10526/10526 [00:42<00:00, 249.38it/s]
+100% 3509/3509 [00:14<00:00, 243.00it/s]
+100% 3509/3509 [00:13<00:00, 253.91it/s]
+Building graph
+Loading data from ./data/traffic6/train.tfrecords
+Building optimizer
+2019-08-22 17:03:38.800395: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-08-22 17:03:38.800640: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x276f480 executing computations on platform Host. Devices:
+2019-08-22 17:03:38.800672: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-08-22 17:03:38.802883: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-08-22 17:03:38.955169: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:03:38.955673: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x276f100 executing computations on platform CUDA. Devices:
+2019-08-22 17:03:38.955701: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2019-08-22 17:03:38.955960: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:03:38.956320: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 17:03:38.956660: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 17:03:38.957917: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 17:03:38.959083: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 17:03:38.959416: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 17:03:38.960790: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 17:03:38.961830: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 17:03:38.964983: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 17:03:38.965135: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:03:38.965587: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:03:38.965933: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 17:03:38.966003: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 17:03:38.967159: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 17:03:38.967189: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 17:03:38.967201: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 17:03:38.967500: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:03:38.967922: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:03:38.968303: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2019-08-22 17:03:39.951464: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Loading weights
+Loading model with fresh parameters
+# of trainable parameters: 1171663
+Started training
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/validation.tfrecords
+2019-08-22 17:04:17.141785: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:04:17.142273: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 17:04:17.142385: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 17:04:17.142417: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 17:04:17.142456: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 17:04:17.142480: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 17:04:17.142504: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 17:04:17.142527: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 17:04:17.142552: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 17:04:17.142641: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:04:17.143053: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:04:17.143435: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 17:04:17.143474: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 17:04:17.143488: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 17:04:17.143499: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 17:04:17.143770: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:04:17.144173: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:04:17.144567: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+
+
+Epoch: 1
+2019-08-22 17:04:32.328498: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 17:04:39.804442: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 329, loss: 0.07350, epoch time: 82.523s
+Saving model, step 329
+Loading saved model from ./models/model_tf/model.ckpt-329
+validation loss: 0.04815, validation rse: 1.01289, validation corr: 0.43112
+
+
+Epoch: 2
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 658, loss: 0.04122, epoch time: 67.402s
+Saving model, step 658
+Loading saved model from ./models/model_tf/model.ckpt-658
+validation loss: 0.03611, validation rse: 0.82480, validation corr: 0.54690
+
+
+Epoch: 3
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 987, loss: 0.03509, epoch time: 63.516s
+Saving model, step 987
+Loading saved model from ./models/model_tf/model.ckpt-987
+validation loss: 0.03352, validation rse: 0.78800, validation corr: 0.60407
+
+
+Epoch: 4
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 1316, loss: 0.03226, epoch time: 72.841s
+Saving model, step 1316
+Loading saved model from ./models/model_tf/model.ckpt-1316
+validation loss: 0.03239, validation rse: 0.77349, validation corr: 0.63933
+
+
+Epoch: 5
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 1645, loss: 0.03057, epoch time: 85.111s
+Saving model, step 1645
+Loading saved model from ./models/model_tf/model.ckpt-1645
+validation loss: 0.03142, validation rse: 0.75914, validation corr: 0.65822
+
+
+Epoch: 6
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 1974, loss: 0.02940, epoch time: 66.563s
+Saving model, step 1974
+Loading saved model from ./models/model_tf/model.ckpt-1974
+validation loss: 0.03038, validation rse: 0.74131, validation corr: 0.66773
+
+
+Epoch: 7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 2303, loss: 0.02853, epoch time: 87.126s
+Saving model, step 2303
+Loading saved model from ./models/model_tf/model.ckpt-2303
+validation loss: 0.03012, validation rse: 0.74097, validation corr: 0.67963
+
+
+Epoch: 8
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 2632, loss: 0.02776, epoch time: 69.110s
+Saving model, step 2632
+Loading saved model from ./models/model_tf/model.ckpt-2632
+validation loss: 0.03058, validation rse: 0.74752, validation corr: 0.69002
+
+
+Epoch: 9
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 2961, loss: 0.02712, epoch time: 73.086s
+Saving model, step 2961
+Loading saved model from ./models/model_tf/model.ckpt-2961
+validation loss: 0.02874, validation rse: 0.71702, validation corr: 0.69519
+
+
+Epoch: 10
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 3290, loss: 0.02667, epoch time: 65.846s
+Saving model, step 3290
+Loading saved model from ./models/model_tf/model.ckpt-3290
+validation loss: 0.02844, validation rse: 0.71121, validation corr: 0.69989
+Saving model as ./saved_models/TF_16_10_3_100
+Stop
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Creating graph
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/test.tfrecords
+2019-08-22 17:35:01.661310: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-08-22 17:35:01.661552: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1955480 executing computations on platform Host. Devices:
+2019-08-22 17:35:01.661586: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-08-22 17:35:01.674819: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-08-22 17:35:01.839176: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:35:01.839748: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1955100 executing computations on platform CUDA. Devices:
+2019-08-22 17:35:01.839792: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2019-08-22 17:35:01.840111: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:35:01.840520: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 17:35:01.840959: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 17:35:01.842342: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 17:35:01.843631: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 17:35:01.844070: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 17:35:01.845603: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 17:35:01.846827: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 17:35:01.850426: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 17:35:01.850616: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:35:01.851076: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:35:01.851434: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 17:35:01.851521: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 17:35:01.852754: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 17:35:01.852783: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 17:35:01.852795: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 17:35:01.853124: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:35:01.853544: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:35:01.853940: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2019-08-22 17:35:02.047475: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Loading weights
+Loading saved model from ./models/model_tf/model.ckpt-3290
+# of trainable parameters: 1171663
+Started testing
+2019-08-22 17:35:06.687219: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 17:35:09.755698: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+test rse: 0.76371, test corr: 0.67662
+Stop
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Creating graph
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/train.tfrecords
+Building optimizer
+2019-08-22 17:37:40.904205: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-08-22 17:37:40.904414: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x27b5480 executing computations on platform Host. Devices:
+2019-08-22 17:37:40.904445: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-08-22 17:37:40.906604: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-08-22 17:37:41.067534: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:37:41.068086: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x27b5100 executing computations on platform CUDA. Devices:
+2019-08-22 17:37:41.068120: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2019-08-22 17:37:41.068412: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:37:41.068857: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 17:37:41.069231: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 17:37:41.070611: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 17:37:41.071821: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 17:37:41.072275: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 17:37:41.073754: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 17:37:41.074849: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 17:37:41.078187: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 17:37:41.078320: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:37:41.078736: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:37:41.079111: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 17:37:41.079189: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 17:37:41.080320: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 17:37:41.080346: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 17:37:41.080357: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 17:37:41.080677: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:37:41.081107: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:37:41.081467: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2019-08-22 17:37:42.106773: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Loading weights
+Loading saved model from ./models/model_tf/model.ckpt-3290
+# of trainable parameters: 1171663
+Started training
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/validation.tfrecords
+2019-08-22 17:38:16.016345: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:38:16.016783: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 17:38:16.016883: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 17:38:16.016916: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 17:38:16.016944: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 17:38:16.016973: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 17:38:16.016996: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 17:38:16.017018: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 17:38:16.017060: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 17:38:16.017185: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:38:16.017636: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:38:16.017989: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 17:38:16.018044: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 17:38:16.018067: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 17:38:16.018079: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 17:38:16.018377: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:38:16.018791: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 17:38:16.019179: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+
+
+Epoch: 1
+2019-08-22 17:38:31.671150: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 17:38:39.182951: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 3619, loss: 0.02613, epoch time: 88.134s
+Saving model, step 3619
+Loading saved model from ./models/model_tf/model.ckpt-3619
+validation loss: 0.02836, validation rse: 0.71316, validation corr: 0.70850
+
+
+Epoch: 2
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 3948, loss: 0.02573, epoch time: 72.737s
+Saving model, step 3948
+Loading saved model from ./models/model_tf/model.ckpt-3948
+validation loss: 0.02886, validation rse: 0.71986, validation corr: 0.71131
+
+
+Epoch: 3
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 4277, loss: 0.02528, epoch time: 73.016s
+Saving model, step 4277
+Loading saved model from ./models/model_tf/model.ckpt-4277
+validation loss: 0.02793, validation rse: 0.70449, validation corr: 0.71838
+
+
+Epoch: 4
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 4606, loss: 0.02495, epoch time: 76.544s
+Saving model, step 4606
+Loading saved model from ./models/model_tf/model.ckpt-4606
+validation loss: 0.02692, validation rse: 0.68408, validation corr: 0.72710
+
+
+Epoch: 5
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 4935, loss: 0.02461, epoch time: 74.622s
+Saving model, step 4935
+Loading saved model from ./models/model_tf/model.ckpt-4935
+validation loss: 0.02703, validation rse: 0.68657, validation corr: 0.72804
+
+
+Epoch: 6
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 5264, loss: 0.02435, epoch time: 70.047s
+Saving model, step 5264
+Loading saved model from ./models/model_tf/model.ckpt-5264
+validation loss: 0.02667, validation rse: 0.67283, validation corr: 0.72903
+
+
+Epoch: 7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 5593, loss: 0.02406, epoch time: 66.979s
+Saving model, step 5593
+Loading saved model from ./models/model_tf/model.ckpt-5593
+validation loss: 0.02673, validation rse: 0.68138, validation corr: 0.73925
+
+
+Epoch: 8
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 5922, loss: 0.02379, epoch time: 68.349s
+Saving model, step 5922
+Loading saved model from ./models/model_tf/model.ckpt-5922
+validation loss: 0.02725, validation rse: 0.68532, validation corr: 0.74357
+
+
+Epoch: 9
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 6251, loss: 0.02350, epoch time: 66.760s
+Saving model, step 6251
+Loading saved model from ./models/model_tf/model.ckpt-6251
+validation loss: 0.02591, validation rse: 0.66659, validation corr: 0.74757
+
+
+Epoch: 10
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 6580, loss: 0.02328, epoch time: 65.944s
+Saving model, step 6580
+Loading saved model from ./models/model_tf/model.ckpt-6580
+validation loss: 0.02545, validation rse: 0.65319, validation corr: 0.75065
+
+
+Epoch: 11
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+Stop
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1356, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1341, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1429, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.DataLossError: 2 root error(s) found.
+  (0) Data loss: corrupted record at 547039092
+	 [[{{node model/input/IteratorGetNext}}]]
+  (1) Data loss: corrupted record at 547039092
+	 [[{{node model/input/IteratorGetNext}}]]
+	 [[model/input/IteratorGetNext/_251]]
+0 successful operations.
+0 derived errors ignored.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/content/drive/Collab/main.py", line 51, in <module>
+    main()
+  File "/content/drive/Collab/main.py", line 29, in main
+    train(para, sess, model, data_generator)
+  File "/content/drive/Collab/lib/train.py", line 27, in train
+    fetches=[model.loss, model.global_step, model.update])
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 950, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1173, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1350, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1370, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.DataLossError: 2 root error(s) found.
+  (0) Data loss: corrupted record at 547039092
+	 [[node model/input/IteratorGetNext (defined at content/drive/Collab/lib/data_generator.py:85) ]]
+  (1) Data loss: corrupted record at 547039092
+	 [[node model/input/IteratorGetNext (defined at content/drive/Collab/lib/data_generator.py:85) ]]
+	 [[model/input/IteratorGetNext/_251]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node model/input/IteratorGetNext:
+ model/input/IteratorV2 (defined at content/drive/Collab/lib/data_generator.py:84)
+
+Input Source operations connected to node model/input/IteratorGetNext:
+ model/input/IteratorV2 (defined at content/drive/Collab/lib/data_generator.py:84)
+
+Original stack trace for 'model/input/IteratorGetNext':
+  File "content/drive/Collab/main.py", line 51, in <module>
+    main()
+  File "content/drive/Collab/main.py", line 18, in main
+    graph, model, data_generator = create_graph(para)
+  File "content/drive/Collab/lib/model_utils.py", line 30, in create_graph
+    model = PolyRNN(para, data_generator)
+  File "content/drive/Collab/lib/model.py", line 14, in __init__
+    self._build_graph()
+  File "content/drive/Collab/lib/model.py", line 27, in _build_graph
+    self.para.mode, self.para.batch_size)
+  File "content/drive/Collab/lib/data_generator.py", line 85, in inputs
+    return self.iterator.get_next()
+  File "usr/local/lib/python3.6/dist-packages/tensorflow/python/data/ops/iterator_ops.py", line 426, in get_next
+    output_shapes=self._structure._flat_shapes, name=name)
+  File "usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/gen_dataset_ops.py", line 1947, in iterator_get_next
+    output_shapes=output_shapes, name=name)
+  File "usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "usr/local/lib/python3.6/dist-packages/tensorflow/python/util/deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+	/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Creating graph
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/train.tfrecords
+Building optimizer
+2019-08-22 18:07:36.666919: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-08-22 18:07:36.667175: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x25ef480 executing computations on platform Host. Devices:
+2019-08-22 18:07:36.667209: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-08-22 18:07:36.680533: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-08-22 18:07:36.835496: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:07:36.836024: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x25ef100 executing computations on platform CUDA. Devices:
+2019-08-22 18:07:36.836071: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2019-08-22 18:07:36.836391: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:07:36.836764: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 18:07:36.842908: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 18:07:36.845865: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 18:07:36.847135: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 18:07:36.847590: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 18:07:36.849257: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 18:07:36.850392: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 18:07:36.855644: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 18:07:36.855790: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:07:36.856226: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:07:36.856552: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 18:07:36.856616: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 18:07:36.857727: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 18:07:36.857753: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 18:07:36.857764: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 18:07:36.858063: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:07:36.858454: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:07:36.858816: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2019-08-22 18:07:37.862060: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Loading weights
+Loading saved model from ./models/model_tf/model.ckpt-6580
+# of trainable parameters: 1171663
+Started training
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/validation.tfrecords
+2019-08-22 18:08:12.347325: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:08:12.347761: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 18:08:12.347862: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 18:08:12.347889: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 18:08:12.347913: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 18:08:12.347937: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 18:08:12.347961: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 18:08:12.347983: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 18:08:12.348007: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 18:08:12.348126: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:08:12.348509: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:08:12.348827: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 18:08:12.348865: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 18:08:12.348878: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 18:08:12.348888: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 18:08:12.349180: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:08:12.349586: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:08:12.349934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+
+
+Epoch: 1
+2019-08-22 18:08:27.572454: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 18:08:34.952067: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 6909, loss: 0.02307, epoch time: 90.239s
+Saving model, step 6909
+Loading saved model from ./models/model_tf/model.ckpt-6909
+validation loss: 0.02574, validation rse: 0.65927, validation corr: 0.75304
+
+
+Epoch: 2
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 7238, loss: 0.02281, epoch time: 69.186s
+Saving model, step 7238
+Loading saved model from ./models/model_tf/model.ckpt-7238
+validation loss: 0.02512, validation rse: 0.64326, validation corr: 0.75437
+
+
+Epoch: 3
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 7567, loss: 0.02255, epoch time: 66.777s
+Saving model, step 7567
+Loading saved model from ./models/model_tf/model.ckpt-7567
+validation loss: 0.02563, validation rse: 0.65487, validation corr: 0.75648
+
+
+Epoch: 4
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 7896, loss: 0.02230, epoch time: 67.750s
+Saving model, step 7896
+Loading saved model from ./models/model_tf/model.ckpt-7896
+validation loss: 0.02552, validation rse: 0.65104, validation corr: 0.75561
+
+
+Epoch: 5
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 8225, loss: 0.02219, epoch time: 68.240s
+Saving model, step 8225
+Loading saved model from ./models/model_tf/model.ckpt-8225
+validation loss: 0.02508, validation rse: 0.64631, validation corr: 0.76432
+
+
+Epoch: 6
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 8554, loss: 0.02194, epoch time: 67.446s
+Saving model, step 8554
+Loading saved model from ./models/model_tf/model.ckpt-8554
+validation loss: 0.02459, validation rse: 0.63423, validation corr: 0.76507
+
+
+Epoch: 7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 8883, loss: 0.02177, epoch time: 65.246s
+Saving model, step 8883
+Loading saved model from ./models/model_tf/model.ckpt-8883
+validation loss: 0.02525, validation rse: 0.64517, validation corr: 0.77045
+
+
+Epoch: 8
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 9212, loss: 0.02158, epoch time: 67.574s
+Saving model, step 9212
+Loading saved model from ./models/model_tf/model.ckpt-9212
+validation loss: 0.02421, validation rse: 0.62735, validation corr: 0.77348
+
+
+Epoch: 9
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 9541, loss: 0.02137, epoch time: 67.379s
+Saving model, step 9541
+Loading saved model from ./models/model_tf/model.ckpt-9541
+validation loss: 0.02399, validation rse: 0.62185, validation corr: 0.77455
+
+
+Epoch: 10
+2019-08-22 18:24:27.870224: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 1 of 1096
+2019-08-22 18:24:27.870486: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 2 of 1096
+2019-08-22 18:24:27.870759: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 3 of 1096
+2019-08-22 18:24:27.870967: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 4 of 1096
+2019-08-22 18:24:28.577987: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 5 of 1096
+2019-08-22 18:24:28.578258: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 6 of 1096
+2019-08-22 18:24:28.578459: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 7 of 1096
+2019-08-22 18:24:28.578592: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 8 of 1096
+2019-08-22 18:24:28.860719: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:162] Shuffle buffer filled.
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 9870, loss: 0.02122, epoch time: 146.057s
+Saving model, step 9870
+Loading saved model from ./models/model_tf/model.ckpt-9870
+validation loss: 0.02374, validation rse: 0.61893, validation corr: 0.77928
+Saving model as ./saved_models/TF_16_30_3_100
+Stop
+
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Creating graph
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/test.tfrecords
+2019-08-22 18:27:54.928019: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-08-22 18:27:54.928257: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x148f480 executing computations on platform Host. Devices:
+2019-08-22 18:27:54.928287: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-08-22 18:27:54.939890: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-08-22 18:27:55.103810: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:27:55.104372: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x148f100 executing computations on platform CUDA. Devices:
+2019-08-22 18:27:55.104403: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2019-08-22 18:27:55.104677: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:27:55.105050: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 18:27:55.105437: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 18:27:55.106740: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 18:27:55.107927: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 18:27:55.108311: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 18:27:55.109857: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 18:27:55.111049: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 18:27:55.114327: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 18:27:55.114476: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:27:55.114887: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:27:55.115242: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 18:27:55.115313: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 18:27:55.116531: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 18:27:55.116560: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 18:27:55.116574: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 18:27:55.116994: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:27:55.117453: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:27:55.117858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2019-08-22 18:27:55.302160: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Loading weights
+Loading saved model from ./models/model_tf/model.ckpt-9870
+# of trainable parameters: 1171663
+Started testing
+2019-08-22 18:27:59.955660: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 18:28:03.109940: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+test rse: 0.67218, test corr: 0.76163
+Stop
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Creating graph
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/train.tfrecords
+Building optimizer
+2019-08-22 18:43:26.424767: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-08-22 18:43:26.424990: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1ced480 executing computations on platform Host. Devices:
+2019-08-22 18:43:26.425050: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-08-22 18:43:26.427822: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-08-22 18:43:26.592533: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:43:26.593056: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1ced100 executing computations on platform CUDA. Devices:
+2019-08-22 18:43:26.593087: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2019-08-22 18:43:26.593333: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:43:26.593701: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 18:43:26.594128: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 18:43:26.595409: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 18:43:26.596569: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 18:43:26.596905: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 18:43:26.598321: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 18:43:26.599584: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 18:43:26.602820: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 18:43:26.602947: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:43:26.603420: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:43:26.603802: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 18:43:26.603869: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 18:43:26.605103: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 18:43:26.605132: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 18:43:26.605145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 18:43:26.605458: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:43:26.605909: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:43:26.606335: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2019-08-22 18:43:27.626317: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Loading weights
+Loading initial model from ./saved_models/TF_16_30_3_100
+# of trainable parameters: 1171663
+Started training
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/validation.tfrecords
+2019-08-22 18:43:59.533787: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:43:59.534280: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 18:43:59.534383: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 18:43:59.534410: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 18:43:59.534435: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 18:43:59.534476: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 18:43:59.534500: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 18:43:59.534524: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 18:43:59.534549: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 18:43:59.534645: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:43:59.535099: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:43:59.535479: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 18:43:59.535517: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 18:43:59.535530: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 18:43:59.535542: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 18:43:59.535816: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:43:59.536225: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 18:43:59.536570: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+
+
+Epoch: 1
+2019-08-22 18:44:15.054056: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 18:44:23.629479: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 10199, loss: 0.02106, epoch time: 59.303s
+Saving model, step 10199
+Loading saved model from ../../models/model_tf/model.ckpt-10199
+validation loss: 0.02348, validation rse: 0.61339, validation corr: 0.78266
+
+
+Epoch: 2
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 10528, loss: 0.02093, epoch time: 39.984s
+Saving model, step 10528
+Loading saved model from ../../models/model_tf/model.ckpt-10528
+validation loss: 0.02342, validation rse: 0.61167, validation corr: 0.78494
+
+
+Epoch: 3
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 10857, loss: 0.02076, epoch time: 38.565s
+Saving model, step 10857
+Loading saved model from ../../models/model_tf/model.ckpt-10857
+validation loss: 0.02379, validation rse: 0.61737, validation corr: 0.78144
+
+
+Epoch: 4
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 11186, loss: 0.02064, epoch time: 39.105s
+Saving model, step 11186
+Loading saved model from ../../models/model_tf/model.ckpt-11186
+validation loss: 0.02335, validation rse: 0.60890, validation corr: 0.78637
+
+
+Epoch: 5
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 11515, loss: 0.02048, epoch time: 38.462s
+Saving model, step 11515
+Loading saved model from ../../models/model_tf/model.ckpt-11515
+validation loss: 0.02315, validation rse: 0.60223, validation corr: 0.78866
+
+
+Epoch: 6
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 11844, loss: 0.02033, epoch time: 40.295s
+Saving model, step 11844
+Loading saved model from ../../models/model_tf/model.ckpt-11844
+validation loss: 0.02291, validation rse: 0.59791, validation corr: 0.79197
+
+
+Epoch: 7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 12173, loss: 0.02025, epoch time: 38.318s
+Saving model, step 12173
+Loading saved model from ../../models/model_tf/model.ckpt-12173
+validation loss: 0.02288, validation rse: 0.59747, validation corr: 0.79027
+
+
+Epoch: 8
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 12502, loss: 0.02010, epoch time: 39.809s
+Saving model, step 12502
+Loading saved model from ../../models/model_tf/model.ckpt-12502
+validation loss: 0.02268, validation rse: 0.59229, validation corr: 0.79378
+
+
+Epoch: 9
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 12831, loss: 0.01998, epoch time: 39.818s
+Saving model, step 12831
+Loading saved model from ../../models/model_tf/model.ckpt-12831
+validation loss: 0.02310, validation rse: 0.60118, validation corr: 0.79047
+
+
+Epoch: 10
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 13160, loss: 0.01985, epoch time: 39.252s
+Saving model, step 13160
+Loading saved model from ../../models/model_tf/model.ckpt-13160
+validation loss: 0.02305, validation rse: 0.59972, validation corr: 0.79263
+
+
+Epoch: 11
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 13489, loss: 0.01971, epoch time: 38.518s
+Saving model, step 13489
+Loading saved model from ../../models/model_tf/model.ckpt-13489
+validation loss: 0.02277, validation rse: 0.59526, validation corr: 0.80048
+
+
+Epoch: 12
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 13818, loss: 0.01964, epoch time: 39.442s
+Saving model, step 13818
+Loading saved model from ../../models/model_tf/model.ckpt-13818
+validation loss: 0.02267, validation rse: 0.59370, validation corr: 0.80000
+
+
+Epoch: 13
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 14147, loss: 0.01954, epoch time: 37.937s
+Saving model, step 14147
+Loading saved model from ../../models/model_tf/model.ckpt-14147
+validation loss: 0.02275, validation rse: 0.59226, validation corr: 0.79901
+
+
+Epoch: 14
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 14476, loss: 0.01942, epoch time: 38.109s
+Saving model, step 14476
+Loading saved model from ../../models/model_tf/model.ckpt-14476
+validation loss: 0.02213, validation rse: 0.58280, validation corr: 0.80396
+
+
+Epoch: 15
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 14805, loss: 0.01926, epoch time: 38.625s
+Saving model, step 14805
+Loading saved model from ../../models/model_tf/model.ckpt-14805
+validation loss: 0.02263, validation rse: 0.59100, validation corr: 0.80442
+
+
+Epoch: 16
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 15134, loss: 0.01915, epoch time: 41.822s
+Saving model, step 15134
+Loading saved model from ../../models/model_tf/model.ckpt-15134
+validation loss: 0.02216, validation rse: 0.57904, validation corr: 0.80418
+
+
+Epoch: 17
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 15463, loss: 0.01907, epoch time: 37.635s
+Saving model, step 15463
+Loading saved model from ../../models/model_tf/model.ckpt-15463
+validation loss: 0.02186, validation rse: 0.57601, validation corr: 0.80959
+
+
+Epoch: 18
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 15792, loss: 0.01899, epoch time: 38.017s
+Saving model, step 15792
+Loading saved model from ../../models/model_tf/model.ckpt-15792
+validation loss: 0.02219, validation rse: 0.57902, validation corr: 0.80636
+
+
+Epoch: 19
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 16121, loss: 0.01886, epoch time: 120.286s
+Saving model, step 16121
+Loading saved model from ../../models/model_tf/model.ckpt-16121
+validation loss: 0.02178, validation rse: 0.57124, validation corr: 0.81034
+
+
+Epoch: 20
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 16450, loss: 0.01878, epoch time: 38.565s
+Saving model, step 16450
+Loading saved model from ../../models/model_tf/model.ckpt-16450
+validation loss: 0.02198, validation rse: 0.57680, validation corr: 0.81000
+
+
+Epoch: 21
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 16779, loss: 0.01866, epoch time: 38.703s
+Saving model, step 16779
+Loading saved model from ../../models/model_tf/model.ckpt-16779
+validation loss: 0.02183, validation rse: 0.57236, validation corr: 0.81019
+
+
+Epoch: 22
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 17108, loss: 0.01856, epoch time: 37.964s
+Saving model, step 17108
+Loading saved model from ../../models/model_tf/model.ckpt-17108
+validation loss: 0.02159, validation rse: 0.56557, validation corr: 0.81531
+
+
+Epoch: 23
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 17437, loss: 0.01848, epoch time: 38.829s
+Saving model, step 17437
+Loading saved model from ../../models/model_tf/model.ckpt-17437
+validation loss: 0.02191, validation rse: 0.57225, validation corr: 0.81376
+
+
+Epoch: 24
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 17766, loss: 0.01835, epoch time: 39.488s
+Saving model, step 17766
+Loading saved model from ../../models/model_tf/model.ckpt-17766
+validation loss: 0.02182, validation rse: 0.57027, validation corr: 0.81455
+
+
+Epoch: 25
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 18095, loss: 0.01829, epoch time: 38.306s
+Saving model, step 18095
+Loading saved model from ../../models/model_tf/model.ckpt-18095
+validation loss: 0.02164, validation rse: 0.56615, validation corr: 0.81387
+
+
+Epoch: 26
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 18424, loss: 0.01823, epoch time: 38.439s
+Saving model, step 18424
+Loading saved model from ../../models/model_tf/model.ckpt-18424
+validation loss: 0.02145, validation rse: 0.56186, validation corr: 0.81690
+
+
+Epoch: 27
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 18753, loss: 0.01809, epoch time: 38.212s
+Saving model, step 18753
+Loading saved model from ../../models/model_tf/model.ckpt-18753
+validation loss: 0.02114, validation rse: 0.55468, validation corr: 0.81772
+
+
+Epoch: 28
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 19082, loss: 0.01802, epoch time: 38.541s
+Saving model, step 19082
+Loading saved model from ../../models/model_tf/model.ckpt-19082
+validation loss: 0.02160, validation rse: 0.56358, validation corr: 0.81747
+
+
+Epoch: 29
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 19411, loss: 0.01792, epoch time: 37.875s
+Saving model, step 19411
+Loading saved model from ../../models/model_tf/model.ckpt-19411
+validation loss: 0.02137, validation rse: 0.55855, validation corr: 0.81962
+
+
+Epoch: 30
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 19740, loss: 0.01787, epoch time: 38.879s
+Saving model, step 19740
+Loading saved model from ../../models/model_tf/model.ckpt-19740
+validation loss: 0.02096, validation rse: 0.55063, validation corr: 0.82176
+Saving model as ./saved_models/TF_16_60_3_128
+Stop
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Creating graph
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/test.tfrecords
+2019-08-22 19:10:02.832645: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-08-22 19:10:02.832866: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1385480 executing computations on platform Host. Devices:
+2019-08-22 19:10:02.832897: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-08-22 19:10:02.835066: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-08-22 19:10:02.988396: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 19:10:02.988926: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1385100 executing computations on platform CUDA. Devices:
+2019-08-22 19:10:02.988954: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2019-08-22 19:10:02.989224: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 19:10:02.989624: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 19:10:02.989996: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 19:10:02.991210: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 19:10:02.992379: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 19:10:02.992748: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 19:10:02.994061: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 19:10:02.995230: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 19:10:02.998334: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 19:10:02.998467: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 19:10:02.998896: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 19:10:02.999317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 19:10:02.999403: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 19:10:03.000486: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 19:10:03.000513: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 19:10:03.000523: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 19:10:03.000814: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 19:10:03.001240: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 19:10:03.001593: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2019-08-22 19:10:03.180086: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Loading weights
+Loading saved model from ../../models/model_tf/model.ckpt-19740
+# of trainable parameters: 1171663
+Started testing
+2019-08-22 19:10:05.436486: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 19:10:10.229416: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+test rse: 0.60586, test corr: 0.80294
+Stop
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Creating graph
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/train.tfrecords
+Building optimizer
+2019-08-22 21:51:44.387447: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-08-22 21:51:44.387698: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1b51480 executing computations on platform Host. Devices:
+2019-08-22 21:51:44.387731: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-08-22 21:51:44.389968: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-08-22 21:51:44.551156: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 21:51:44.551723: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1b51100 executing computations on platform CUDA. Devices:
+2019-08-22 21:51:44.551755: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2019-08-22 21:51:44.552142: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 21:51:44.552582: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 21:51:44.553060: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 21:51:44.554452: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 21:51:44.555708: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 21:51:44.556104: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 21:51:44.557710: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 21:51:44.558877: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 21:51:44.562632: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 21:51:44.562775: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 21:51:44.563243: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 21:51:44.563602: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 21:51:44.563675: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 21:51:44.565050: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 21:51:44.565077: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 21:51:44.565089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 21:51:44.565422: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 21:51:44.565844: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 21:51:44.566275: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2019-08-22 21:51:45.620270: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Loading weights
+Loading initial model from ./saved_models/TF_16_60_3_128
+# of trainable parameters: 1171663
+Started training
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/validation.tfrecords
+2019-08-22 21:52:26.783477: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 21:52:26.783905: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 21:52:26.784001: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 21:52:26.784046: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 21:52:26.784073: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 21:52:26.784101: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 21:52:26.784131: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 21:52:26.784154: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 21:52:26.784177: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 21:52:26.784271: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 21:52:26.784674: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 21:52:26.785044: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 21:52:26.785087: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 21:52:26.785126: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 21:52:26.785154: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 21:52:26.785455: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 21:52:26.785870: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 21:52:26.786244: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+
+
+Epoch: 1
+2019-08-22 21:52:42.782419: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 21:52:51.509569: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 20069, loss: 0.01775, epoch time: 58.216s
+Saving model, step 20069
+Loading saved model from ../../models/model_tf/model.ckpt-20069
+validation loss: 0.02104, validation rse: 0.55397, validation corr: 0.82132
+
+
+Epoch: 2
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 20398, loss: 0.01774, epoch time: 39.269s
+Saving model, step 20398
+Loading saved model from ../../models/model_tf/model.ckpt-20398
+validation loss: 0.02125, validation rse: 0.55700, validation corr: 0.81710
+
+
+Epoch: 3
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 20727, loss: 0.01763, epoch time: 39.203s
+Saving model, step 20727
+Loading saved model from ../../models/model_tf/model.ckpt-20727
+validation loss: 0.02112, validation rse: 0.55149, validation corr: 0.82087
+
+
+Epoch: 4
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 21056, loss: 0.01758, epoch time: 38.738s
+Saving model, step 21056
+Loading saved model from ../../models/model_tf/model.ckpt-21056
+validation loss: 0.02109, validation rse: 0.55176, validation corr: 0.82185
+
+
+Epoch: 5
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 21385, loss: 0.01752, epoch time: 38.787s
+Saving model, step 21385
+Loading saved model from ../../models/model_tf/model.ckpt-21385
+validation loss: 0.02128, validation rse: 0.55623, validation corr: 0.81838
+
+
+Epoch: 6
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 21714, loss: 0.01741, epoch time: 38.806s
+Saving model, step 21714
+Loading saved model from ../../models/model_tf/model.ckpt-21714
+validation loss: 0.02119, validation rse: 0.55428, validation corr: 0.81996
+
+
+Epoch: 7
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 22043, loss: 0.01738, epoch time: 38.706s
+Saving model, step 22043
+Loading saved model from ../../models/model_tf/model.ckpt-22043
+validation loss: 0.02073, validation rse: 0.54357, validation corr: 0.82289
+
+
+Epoch: 8
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 22372, loss: 0.01732, epoch time: 38.728s
+Saving model, step 22372
+Loading saved model from ../../models/model_tf/model.ckpt-22372
+validation loss: 0.02112, validation rse: 0.55149, validation corr: 0.82370
+
+
+Epoch: 9
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 22701, loss: 0.01727, epoch time: 38.152s
+Saving model, step 22701
+Loading saved model from ../../models/model_tf/model.ckpt-22701
+validation loss: 0.02067, validation rse: 0.54271, validation corr: 0.82529
+
+
+Epoch: 10
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 23030, loss: 0.01717, epoch time: 38.010s
+Saving model, step 23030
+Loading saved model from ../../models/model_tf/model.ckpt-23030
+validation loss: 0.02107, validation rse: 0.55209, validation corr: 0.82388
+
+
+Epoch: 11
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 23359, loss: 0.01715, epoch time: 38.210s
+Saving model, step 23359
+Loading saved model from ../../models/model_tf/model.ckpt-23359
+validation loss: 0.02098, validation rse: 0.54700, validation corr: 0.82426
+
+
+Epoch: 12
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 23688, loss: 0.01710, epoch time: 38.595s
+Saving model, step 23688
+Loading saved model from ../../models/model_tf/model.ckpt-23688
+validation loss: 0.02053, validation rse: 0.54256, validation corr: 0.82615
+
+
+Epoch: 13
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 24017, loss: 0.01704, epoch time: 39.500s
+Saving model, step 24017
+Loading saved model from ../../models/model_tf/model.ckpt-24017
+validation loss: 0.02079, validation rse: 0.54484, validation corr: 0.82496
+
+
+Epoch: 14
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 24346, loss: 0.01701, epoch time: 39.826s
+Saving model, step 24346
+Loading saved model from ../../models/model_tf/model.ckpt-24346
+validation loss: 0.02071, validation rse: 0.54622, validation corr: 0.82443
+
+
+Epoch: 15
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 24675, loss: 0.01695, epoch time: 39.177s
+Saving model, step 24675
+Loading saved model from ../../models/model_tf/model.ckpt-24675
+validation loss: 0.02048, validation rse: 0.53986, validation corr: 0.82676
+
+
+Epoch: 16
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 25004, loss: 0.01688, epoch time: 40.370s
+Saving model, step 25004
+Loading saved model from ../../models/model_tf/model.ckpt-25004
+validation loss: 0.02137, validation rse: 0.55670, validation corr: 0.82077
+
+
+Epoch: 17
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 25333, loss: 0.01682, epoch time: 39.047s
+Saving model, step 25333
+Loading saved model from ../../models/model_tf/model.ckpt-25333
+validation loss: 0.02110, validation rse: 0.55323, validation corr: 0.82236
+
+
+Epoch: 18
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 25662, loss: 0.01680, epoch time: 39.204s
+Saving model, step 25662
+Loading saved model from ../../models/model_tf/model.ckpt-25662
+validation loss: 0.02071, validation rse: 0.54438, validation corr: 0.82557
+
+
+Epoch: 19
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 25991, loss: 0.01676, epoch time: 39.079s
+Saving model, step 25991
+Loading saved model from ../../models/model_tf/model.ckpt-25991
+validation loss: 0.02067, validation rse: 0.54171, validation corr: 0.82623
+
+
+Epoch: 20
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 26320, loss: 0.01670, epoch time: 39.994s
+Saving model, step 26320
+Loading saved model from ../../models/model_tf/model.ckpt-26320
+validation loss: 0.02066, validation rse: 0.54183, validation corr: 0.82660
+
+
+Epoch: 21
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 26649, loss: 0.01668, epoch time: 38.316s
+Saving model, step 26649
+Loading saved model from ../../models/model_tf/model.ckpt-26649
+validation loss: 0.02064, validation rse: 0.54185, validation corr: 0.82801
+
+
+Epoch: 22
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 26978, loss: 0.01660, epoch time: 40.711s
+Saving model, step 26978
+Loading saved model from ../../models/model_tf/model.ckpt-26978
+validation loss: 0.02061, validation rse: 0.54206, validation corr: 0.82606
+
+
+Epoch: 23
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 27307, loss: 0.01653, epoch time: 38.897s
+Saving model, step 27307
+Loading saved model from ../../models/model_tf/model.ckpt-27307
+validation loss: 0.02058, validation rse: 0.54432, validation corr: 0.82522
+
+
+Epoch: 24
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 27636, loss: 0.01649, epoch time: 39.797s
+Saving model, step 27636
+Loading saved model from ../../models/model_tf/model.ckpt-27636
+validation loss: 0.02082, validation rse: 0.54695, validation corr: 0.82376
+
+
+Epoch: 25
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 27965, loss: 0.01649, epoch time: 38.430s
+Saving model, step 27965
+Loading saved model from ../../models/model_tf/model.ckpt-27965
+validation loss: 0.02058, validation rse: 0.54073, validation corr: 0.82572
+
+
+Epoch: 26
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 28294, loss: 0.01646, epoch time: 40.166s
+Saving model, step 28294
+Loading saved model from ../../models/model_tf/model.ckpt-28294
+validation loss: 0.02098, validation rse: 0.55036, validation corr: 0.82552
+
+
+Epoch: 27
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 28623, loss: 0.01640, epoch time: 38.253s
+Saving model, step 28623
+Loading saved model from ../../models/model_tf/model.ckpt-28623
+validation loss: 0.02104, validation rse: 0.54976, validation corr: 0.82505
+
+
+Epoch: 28
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 28952, loss: 0.01638, epoch time: 38.593s
+Saving model, step 28952
+Loading saved model from ../../models/model_tf/model.ckpt-28952
+validation loss: 0.02059, validation rse: 0.54024, validation corr: 0.82832
+
+
+Epoch: 29
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 29281, loss: 0.01633, epoch time: 38.946s
+Saving model, step 29281
+Loading saved model from ../../models/model_tf/model.ckpt-29281
+validation loss: 0.02073, validation rse: 0.54405, validation corr: 0.82601
+
+
+Epoch: 30
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 29610, loss: 0.01629, epoch time: 39.619s
+Saving model, step 29610
+Loading saved model from ../../models/model_tf/model.ckpt-29610
+validation loss: 0.02078, validation rse: 0.54477, validation corr: 0.82803
+
+
+Epoch: 31
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 29939, loss: 0.01626, epoch time: 38.349s
+Saving model, step 29939
+Loading saved model from ../../models/model_tf/model.ckpt-29939
+validation loss: 0.02080, validation rse: 0.54827, validation corr: 0.82343
+
+
+Epoch: 32
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 30268, loss: 0.01624, epoch time: 39.553s
+Saving model, step 30268
+Loading saved model from ../../models/model_tf/model.ckpt-30268
+validation loss: 0.02090, validation rse: 0.54555, validation corr: 0.82447
+
+
+Epoch: 33
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 30597, loss: 0.01623, epoch time: 38.987s
+Saving model, step 30597
+Loading saved model from ../../models/model_tf/model.ckpt-30597
+validation loss: 0.02059, validation rse: 0.54278, validation corr: 0.82800
+
+
+Epoch: 34
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 30926, loss: 0.01615, epoch time: 39.540s
+Saving model, step 30926
+Loading saved model from ../../models/model_tf/model.ckpt-30926
+validation loss: 0.02064, validation rse: 0.54327, validation corr: 0.82670
+
+
+Epoch: 35
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 31255, loss: 0.01607, epoch time: 38.456s
+Saving model, step 31255
+Loading saved model from ../../models/model_tf/model.ckpt-31255
+validation loss: 0.02085, validation rse: 0.54587, validation corr: 0.82892
+
+
+Epoch: 36
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 31584, loss: 0.01610, epoch time: 39.699s
+Saving model, step 31584
+Loading saved model from ../../models/model_tf/model.ckpt-31584
+validation loss: 0.02045, validation rse: 0.53776, validation corr: 0.82844
+
+
+Epoch: 37
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 31913, loss: 0.01607, epoch time: 38.472s
+Saving model, step 31913
+Loading saved model from ../../models/model_tf/model.ckpt-31913
+validation loss: 0.02058, validation rse: 0.54042, validation corr: 0.82816
+
+
+Epoch: 38
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 32242, loss: 0.01605, epoch time: 39.684s
+Saving model, step 32242
+Loading saved model from ../../models/model_tf/model.ckpt-32242
+validation loss: 0.02078, validation rse: 0.54424, validation corr: 0.82442
+
+
+Epoch: 39
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 32571, loss: 0.01597, epoch time: 38.392s
+Saving model, step 32571
+Loading saved model from ../../models/model_tf/model.ckpt-32571
+validation loss: 0.02100, validation rse: 0.55114, validation corr: 0.82508
+
+
+Epoch: 40
+25
+50
+75
+100
+125
+150
+175
+200
+225
+250
+275
+300
+325
+global step: 32900, loss: 0.01592, epoch time: 40.032s
+Saving model, step 32900
+Loading saved model from ../../models/model_tf/model.ckpt-32900
+validation loss: 0.02061, validation rse: 0.54282, validation corr: 0.82835
+Saving model as ./saved_models/TF_16_100_3_128
+Stop
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Creating graph
+Downloading Time Series traffic data set...
+split is [0, 0.6, 0.8, 1]
+rse = 0.05709034691389371
+Building graph
+Loading data from ./data/traffic6/test.tfrecords
+2019-08-22 22:34:46.772883: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-08-22 22:34:46.773140: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x275f480 executing computations on platform Host. Devices:
+2019-08-22 22:34:46.773172: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-08-22 22:34:46.775396: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-08-22 22:34:46.941878: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 22:34:46.942462: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x275f100 executing computations on platform CUDA. Devices:
+2019-08-22 22:34:46.942493: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2019-08-22 22:34:46.942783: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 22:34:46.943166: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2019-08-22 22:34:46.943588: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 22:34:46.945093: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 22:34:46.947024: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-08-22 22:34:46.947416: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-08-22 22:34:46.948880: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-22 22:34:46.949970: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-22 22:34:46.953176: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-08-22 22:34:46.953330: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 22:34:46.953779: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 22:34:46.954157: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-08-22 22:34:46.954234: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-08-22 22:34:46.955366: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-22 22:34:46.955392: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-08-22 22:34:46.955404: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-08-22 22:34:46.955719: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 22:34:46.956155: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-22 22:34:46.956544: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14202 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2019-08-22 22:34:47.137347: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Loading weights
+Loading saved model from ../../models/model_tf/model.ckpt-32900
+# of trainable parameters: 1171663
+Started testing
+2019-08-22 22:34:49.410759: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-08-22 22:34:52.879350: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+test rse: 0.59909, test corr: 0.80543
+Stop

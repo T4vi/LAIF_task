@@ -2,7 +2,7 @@ import re
 import numpy as np
 import matplotlib.pyplot as plt
 
-with open('results_TF_16_XX_3_128.txt') as f:
+with open('results_TF_16_XX_3_338.txt') as f:
     text = f.read().strip()
 
 tr_loss 	= np.asarray(re.findall('(?<=, loss: )\d.\d*', text), dtype=np.float32)
@@ -42,10 +42,10 @@ if (training_stats['val_rse'].shape[0] != 0):
 	plt.title('Val/Test RSE (B) and CORR (R)')
 	plt.plot(training_stats['val_rse'], 'b-')
 	if (training_stats['test_rse'].shape[0] != 0):
-		plt.plot(len(training_stats['val_rse'])-1, training_stats['test_rse'][-1:], 'k+')
+		plt.plot(len(training_stats['val_rse'])-1, training_stats['test_rse'][-1:], 'k*')
 	plt.plot(training_stats['val_corr'], 'r-')
 	if (training_stats['test_corr'].shape[0] != 0):
-		plt.plot(len(training_stats['val_corr'])-1, training_stats['test_corr'][-1:], 'k+')
+		plt.plot(len(training_stats['val_corr'])-1, training_stats['test_corr'][-1:], 'k*')
 	plt.ylabel('Validation and Test RSE (B) and CORR (R)')
 	plt.xlabel('Epochs')
 elif (training_stats['test_p'][0] != 0):

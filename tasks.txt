@@ -64,7 +64,7 @@ Extras:
 	+ add tensorboard 
 		- need tf 2.0
 	+ Optimize for G Colab, save temp on HDD, not in drive, etc
-		-
+		- Save temp models on HDD instead of GDdrive folder
 	+ script for plotting metrics 
 		- DONE
 	+ auto-tuned hyperparms script
