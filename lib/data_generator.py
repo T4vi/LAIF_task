@@ -38,8 +38,16 @@ class DataGenerator(metaclass=ABCMeta):
         required.
         """
         if mode == 'predict':
-            x = tf.placeholder(tf.float32, shape=[None, self.para.attention_len])
-            dataset = tf.data.Dataset.from_tensor_slices(x)
+            # x = tf.placeholder(tf.float32, shape=[None, self.para.attention_len])
+            # dataset = tf.data.Dataset.from_tensor_slices(x)
+
+            #filename = self.DATA_PATH + "/" + mode + ".tfrecords"
+            filename = "../../test.tfrecords"
+
+            logging.info("Loading data from {}".format(filename))
+            dataset = tf.data.TFRecordDataset(filename)
+
+            dataset = dataset.map(self._decode_predict)
 
             self.iterator = dataset.batch(1).make_initializable_iterator()
             return self.iterator.get_next()
@@ -376,6 +384,27 @@ class TimeSeriesDataGenerator(DataGenerator):
         return []
 
     def _decode(self, serialized_example):
+        example = tf.parse_single_example(
+            serialized_example,
+            features={
+                "x":
+                tf.FixedLenFeature([self.MAX_LEN, self.INPUT_SIZE],
+                                   tf.float32),
+                "y":
+                tf.FixedLenFeature([self.OUTPUT_SIZE], tf.float32),
+            },
+        )
+        rnn_input = tf.to_float(
+            tf.reshape(example["x"], (self.MAX_LEN, self.INPUT_SIZE)))
+        rnn_input_len = tf.constant(self.MAX_LEN, dtype=tf.int32)
+        target_output = tf.expand_dims(tf.to_float(example["y"]), 0)
+        target_output = tf.tile(target_output, [self.MAX_LEN, 1])
+        return rnn_input, rnn_input_len, target_output
+
+    def _decode_predict(self, serialized_example):
+        self.MAX_LEN = self.para.attention_len
+        # self.INPUT_SIZE = 1
+        # self.output_size = 1
         example = tf.parse_single_example(
             serialized_example,
             features={

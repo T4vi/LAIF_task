@@ -33,6 +33,7 @@ def params_setup():
     parser.add_argument('--num_units', type=int, default=338)
     parser.add_argument('--first_epoch', type=int, default=1)
     parser.add_argument('--save_final_model_path', type=str, default='')
+    parser.add_argument('--samples', type=int, default=1)
 
     para = parser.parse_args()
 
